@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pROJECTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projectManagementDBDataSet = new ProjectManagement.ProjectManagementDBDataSet();
             this.projectNameSearchl = new System.Windows.Forms.Label();
@@ -67,6 +70,7 @@
             this.pROJECTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROJECTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projectListGrid = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -115,6 +119,8 @@
             // 
             // projectIDSearcht
             // 
+            this.projectIDSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectIDSearcht.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.projectIDSearcht.Location = new System.Drawing.Point(30, 49);
             this.projectIDSearcht.Name = "projectIDSearcht";
             this.projectIDSearcht.Size = new System.Drawing.Size(103, 20);
@@ -123,8 +129,9 @@
             // searchProjectbtn
             // 
             this.searchProjectbtn.BackColor = System.Drawing.Color.Transparent;
+            this.searchProjectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchProjectbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchProjectbtn.ForeColor = System.Drawing.Color.Black;
+            this.searchProjectbtn.ForeColor = System.Drawing.Color.Transparent;
             this.searchProjectbtn.Location = new System.Drawing.Point(30, 205);
             this.searchProjectbtn.Name = "searchProjectbtn";
             this.searchProjectbtn.Size = new System.Drawing.Size(103, 25);
@@ -199,6 +206,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.groupBox1.Controls.Add(this.projectStatusSearchcb);
             this.groupBox1.Controls.Add(this.searchProjectbtn);
             this.groupBox1.Controls.Add(this.projectUserSearchcb);
@@ -212,7 +220,8 @@
             this.groupBox1.Controls.Add(this.projectUserSearchl);
             this.groupBox1.Controls.Add(this.projectIDSearchl);
             this.groupBox1.Controls.Add(this.projectIDSearcht);
-            this.groupBox1.Location = new System.Drawing.Point(891, 153);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(868, 153);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(311, 249);
             this.groupBox1.TabIndex = 17;
@@ -242,25 +251,37 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.button1.Location = new System.Drawing.Point(30, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 23);
             this.button1.TabIndex = 18;
             this.button1.Text = "Create Project";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(30, 74);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 23);
             this.button2.TabIndex = 19;
             this.button2.Text = "Edit Project";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button3.Location = new System.Drawing.Point(183, 74);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 23);
@@ -270,11 +291,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Location = new System.Drawing.Point(891, 18);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(868, 18);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(311, 114);
             this.groupBox2.TabIndex = 21;
@@ -283,12 +306,16 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(183, 29);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(96, 23);
             this.button4.TabIndex = 21;
             this.button4.Text = "Project Details";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // eXPERTSBindingSource
@@ -368,7 +395,19 @@
             // projectListGrid
             // 
             this.projectListGrid.AutoGenerateColumns = false;
-            this.projectListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.projectListGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
+            this.projectListGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.projectListGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.projectListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.projectListGrid.ColumnHeadersHeight = 35;
+            this.projectListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.projectListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pROJECTIDDataGridViewTextBoxColumn,
             this.pROJECTNAMEDataGridViewTextBoxColumn,
@@ -380,20 +419,50 @@
             this.pROJECTPAYPERHOURDataGridViewTextBoxColumn,
             this.editProjectStatus});
             this.projectListGrid.DataSource = this.pROJECTSBindingSource;
+            this.projectListGrid.EnableHeadersVisualStyles = false;
+            this.projectListGrid.GridColor = System.Drawing.Color.SteelBlue;
             this.projectListGrid.Location = new System.Drawing.Point(27, 18);
             this.projectListGrid.Name = "projectListGrid";
-            this.projectListGrid.Size = new System.Drawing.Size(844, 384);
+            this.projectListGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.projectListGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.projectListGrid.RowHeadersVisible = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.projectListGrid.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.projectListGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.projectListGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.projectListGrid.Size = new System.Drawing.Size(801, 384);
             this.projectListGrid.TabIndex = 0;
             this.projectListGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectListGrid_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Location = new System.Drawing.Point(846, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(359, 437);
+            this.panel1.TabIndex = 22;
             // 
             // Project_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 431);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.ClientSize = new System.Drawing.Size(1204, 431);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.projectListGrid);
+            this.Controls.Add(this.panel1);
             this.Name = "Project_List";
             this.Text = "Project_List";
             this.Load += new System.EventHandler(this.Project_List_Load);
@@ -450,5 +519,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView projectListGrid;
+        private System.Windows.Forms.Panel panel1;
     }
 }
