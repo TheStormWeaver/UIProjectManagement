@@ -33,5 +33,16 @@ namespace ProjectManagement.Properties {
                 return ((string)(this["ProjectManagementDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9166LMU;Initial Catalog=ProjectManagementDB;Integrated Securi" +
+            "ty=True")]
+        public string ProjectManagementDBConnectionString1 {
+            get {
+                return ((string)(this["ProjectManagementDBConnectionString1"]));
+            }
+        }
     }
 }
