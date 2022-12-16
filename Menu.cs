@@ -12,9 +12,16 @@ namespace ProjectManagement
 {
     public partial class menu : Form
     {
+        private Form currentChildForm;
+
         public menu()
         {
             InitializeComponent();
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+
         }
 
         private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,6 +37,10 @@ namespace ProjectManagement
             this.Controls.Add(frm);
             frm.SetBounds(10, 30, 850, 280);
             frm.Show();
+
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            frm.BringToFront();
         }
 
         private void viewTasksToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,8 +57,12 @@ namespace ProjectManagement
             Project_List frm = new Project_List();
             frm.TopLevel = false;
             this.Controls.Add(frm);
-            frm.SetBounds(10, 30, 1520, 330);
+            //frm.SetBounds(10, 30, 1520, 330);
             frm.Show();
+
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            frm.BringToFront();
         }
 
         private void createProjectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,12 +77,7 @@ namespace ProjectManagement
             frm2.ShowDialog();
         }
 
-        private void tasksToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UsersBtn_Click(object sender, EventArgs e)
         {
             User_List frm = new User_List();
             frm.TopLevel = false;
@@ -76,7 +86,7 @@ namespace ProjectManagement
             frm.Show();
         }
 
-        private void tasksToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ProjectsBtn_Click(object sender, EventArgs e)
         {
             Project_List frm = new Project_List();
             frm.TopLevel = false;
@@ -85,7 +95,7 @@ namespace ProjectManagement
             frm.Show();
         }
 
-        private void tasksToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void TasksBtn_Click(object sender, EventArgs e)
         {
             Task_List frm = new Task_List();
             frm.TopLevel = false;
