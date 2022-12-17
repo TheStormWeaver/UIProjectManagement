@@ -36,16 +36,16 @@
             this.ProjectsBtn = new System.Windows.Forms.Button();
             this.UsersBtn = new System.Windows.Forms.Button();
             this.dashboardBtn = new System.Windows.Forms.Button();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelUsername = new System.Windows.Forms.Label();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -78,6 +78,7 @@
             this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // TasksBtn
             // 
@@ -146,26 +147,14 @@
             this.dashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.dashboardBtn.UseVisualStyleBackColor = true;
             // 
-            // panelTitleBar
+            // panel2
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Location = new System.Drawing.Point(198, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(755, 91);
-            this.panelTitleBar.TabIndex = 2;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(354, 34);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(64, 25);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Home";
+            this.panel2.Controls.Add(this.panelUsername);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 91);
+            this.panel2.TabIndex = 2;
             // 
             // panelUsername
             // 
@@ -178,27 +167,15 @@
             this.panelUsername.TabIndex = 1;
             this.panelUsername.Text = "Username";
             // 
-            // panel2
+            // panelTitleBar
             // 
-            this.panel2.Controls.Add(this.panelUsername);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 91);
-            this.panel2.TabIndex = 2;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // panelDesktopPane
-            // 
-            this.panelDesktopPane.Location = new System.Drawing.Point(198, 88);
-            this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(755, 489);
-            this.panelDesktopPane.TabIndex = 3;
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Location = new System.Drawing.Point(198, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(755, 91);
+            this.panelTitleBar.TabIndex = 2;
             // 
             // btnCloseChildForm
             // 
@@ -210,6 +187,31 @@
             this.btnCloseChildForm.Size = new System.Drawing.Size(75, 23);
             this.btnCloseChildForm.TabIndex = 1;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(354, 34);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(64, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Home";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // panelDesktopPane
+            // 
+            this.panelDesktopPane.Location = new System.Drawing.Point(198, 88);
+            this.panelDesktopPane.Name = "panelDesktopPane";
+            this.panelDesktopPane.Size = new System.Drawing.Size(752, 489);
+            this.panelDesktopPane.TabIndex = 3;
+            this.panelDesktopPane.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPane_Paint);
             // 
             // menu
             // 
@@ -224,10 +226,10 @@
             this.Name = "menu";
             this.Text = "Main Menu";
             this.panelMenu.ResumeLayout(false);
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
