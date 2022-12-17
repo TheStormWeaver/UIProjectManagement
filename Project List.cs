@@ -28,11 +28,11 @@ namespace ProjectManagement
 
         private void searchProjectbtn_Click(object sender, EventArgs e)
         {
-         //   this.pROJECTSTableAdapter.FillByProjectIDSearch(this.projectManagementDBDataSet.PROJECTS, Convert.ToDecimal(projectIDSearcht.Text));
-         //   this.pROJECTSTableAdapter.FillByProjectDateSearch(this.projectManagementDBDataSet.PROJECTS, projectStartDateSearcht.Text, projectEndDateSearcht.Text);
-         //   this.pROJECTSTableAdapter.FillByPorjectClientSearch(this.projectManagementDBDataSet.PROJECTS, projectUserSearchcb.Text);
-         //   this.pROJECTSTableAdapter.FillByProjectNameSearch(this.projectManagementDBDataSet.PROJECTS, projectNameSearcht.Text);
-         //   this.pROJECTSTableAdapter.FillByProjectStatusSearch(this.projectManagementDBDataSet.PROJECTS, Convert.ToDecimal(projectStatusSearchcb.Text));
+            this.pROJECTSTableAdapter.FillByProjectIDSearch(this.projectManagementDBDataSet.PROJECTS, Convert.ToDecimal(projectIDSearcht.Text));
+            this.pROJECTSTableAdapter.FillByProjectDateSearch(this.projectManagementDBDataSet.PROJECTS, projectStartDateSearcht.Text, projectEndDateSearcht.Text);
+            this.pROJECTSTableAdapter.FillByPorjectClientSearch(this.projectManagementDBDataSet.PROJECTS, projectUserSearchcb.Text);
+            this.pROJECTSTableAdapter.FillByProjectNameSearch(this.projectManagementDBDataSet.PROJECTS, projectNameSearcht.Text);
+            this.pROJECTSTableAdapter.FillByProjectStatusSearch(this.projectManagementDBDataSet.PROJECTS, Convert.ToDecimal(projectStatusSearchcb.Text));
         }
 
         private void projectListGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
