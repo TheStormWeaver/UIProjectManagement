@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.userListGrid = new System.Windows.Forms.DataGridView();
             this.eXPRETIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eXPERTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +62,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.projectManagementDBDataSet1 = new ProjectManagement.ProjectManagementDBDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.userListGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXPERTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).BeginInit();
@@ -65,12 +70,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // userListGrid
             // 
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.userListGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.userListGrid.AutoGenerateColumns = false;
-            this.userListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userListGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.userListGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.userListGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userListGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.userListGrid.ColumnHeadersHeight = 32;
             this.userListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.eXPRETIDDataGridViewTextBoxColumn,
             this.eXPERTNAMEDataGridViewTextBoxColumn,
@@ -78,9 +97,31 @@
             this.eXPERTLASTNAMEDataGridViewTextBoxColumn,
             this.eXPERTTYPEDataGridViewTextBoxColumn});
             this.userListGrid.DataSource = this.eXPERTSBindingSource;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userListGrid.DefaultCellStyle = dataGridViewCellStyle15;
+            this.userListGrid.EnableHeadersVisualStyles = false;
+            this.userListGrid.GridColor = System.Drawing.Color.WhiteSmoke;
             this.userListGrid.Location = new System.Drawing.Point(12, 20);
             this.userListGrid.Name = "userListGrid";
-            this.userListGrid.Size = new System.Drawing.Size(445, 305);
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userListGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.userListGrid.RowHeadersVisible = false;
+            this.userListGrid.RowTemplate.DividerHeight = 3;
+            this.userListGrid.RowTemplate.Height = 30;
+            this.userListGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.userListGrid.Size = new System.Drawing.Size(443, 305);
             this.userListGrid.TabIndex = 0;
             // 
             // eXPRETIDDataGridViewTextBoxColumn
@@ -158,12 +199,14 @@
             // 
             // searchProjectbtn
             // 
-            this.searchProjectbtn.BackColor = System.Drawing.Color.Transparent;
-            this.searchProjectbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchProjectbtn.ForeColor = System.Drawing.Color.Black;
+            this.searchProjectbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.searchProjectbtn.FlatAppearance.BorderSize = 0;
+            this.searchProjectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchProjectbtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchProjectbtn.ForeColor = System.Drawing.Color.White;
             this.searchProjectbtn.Location = new System.Drawing.Point(26, 136);
             this.searchProjectbtn.Name = "searchProjectbtn";
-            this.searchProjectbtn.Size = new System.Drawing.Size(103, 27);
+            this.searchProjectbtn.Size = new System.Drawing.Size(103, 28);
             this.searchProjectbtn.TabIndex = 13;
             this.searchProjectbtn.Text = "Search For Users";
             this.searchProjectbtn.UseVisualStyleBackColor = false;
@@ -266,26 +309,40 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(160)))), ((int)(((byte)(244)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(160)))), ((int)(((byte)(244)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(164, 29);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 23);
             this.button4.TabIndex = 21;
             this.button4.Text = "User Details";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(26, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 18;
             this.button1.Text = "Create Users";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(160)))), ((int)(((byte)(244)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(160)))), ((int)(((byte)(244)))));
             this.button3.Location = new System.Drawing.Point(164, 74);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 23);
@@ -295,6 +352,10 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
             this.button2.Location = new System.Drawing.Point(26, 74);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 23);
@@ -302,10 +363,16 @@
             this.button2.Text = "Edit Users";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // projectManagementDBDataSet1
+            // 
+            this.projectManagementDBDataSet1.DataSetName = "ProjectManagementDBDataSet";
+            this.projectManagementDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // User_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(797, 351);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -321,6 +388,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,5 +424,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private ProjectManagementDBDataSet projectManagementDBDataSet1;
     }
 }

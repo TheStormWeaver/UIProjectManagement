@@ -139,7 +139,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(379, 424);
+            this.tabPage1.Size = new System.Drawing.Size(448, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Project Details";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -374,7 +374,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(942, 424);
+            this.tabPage3.Size = new System.Drawing.Size(448, 424);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Project Tasks";
             this.tabPage3.UseVisualStyleBackColor = true;

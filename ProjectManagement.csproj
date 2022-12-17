@@ -118,6 +118,7 @@
     <Compile Include="Task List.Designer.cs">
       <DependentUpon>Task List.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemeColor.cs" />
     <Compile Include="User Details.cs">
       <SubType>Form</SubType>
     </Compile>
