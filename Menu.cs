@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,12 @@ namespace ProjectManagement
         private int tempIndex;
         private Form activeForm;
 
-        public menu()
+        CurrentUser user;
+
+        public menu(CurrentUser user)
         {
             InitializeComponent();
-
+            this.user = user;
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
@@ -220,6 +223,37 @@ namespace ProjectManagement
             if (activeForm != null)
                 activeForm.Close();
             Reset();
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            if (user != null)
+            {
+                user = null;
+                this.Hide();
+                menu home = new menu(user);
+                home.ShowDialog();
+            }
+            else
+            {
+                this.Hide();
+                Login reg = new Login();
+                reg.ShowDialog();
+            }
+        }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+            if (user != null)
+            {
+                LoginBtn.Text = "  Log out";
+                panelUsername.Text = user.Name;
+            }
+            else
+            {
+                LoginBtn.Text = "  Log in";
+                panelUsername.Text = "Again";
+            }
         }
     }
 }

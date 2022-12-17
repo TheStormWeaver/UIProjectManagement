@@ -43,7 +43,7 @@ namespace ProjectManagement
                     user.Name = name;
                     dr.Close();
                     this.Hide();
-                    menu home = new menu();
+                    menu home = new menu(user);
                     home.ShowDialog();
                 }
                 else
@@ -67,6 +67,34 @@ namespace ProjectManagement
             login.ShowDialog();
         }
 
+        private void loginBtn_Click_1(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != string.Empty || txtUsername.Text != string.Empty)
+            {
+                string name = null;
+                cmd = new SqlCommand("select * from [APP_USER] where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    CurrentUser user = new CurrentUser();
+                    name = dr["username"].ToString();
+                    user.Name = name;
+                    dr.Close();
+                    this.Hide();
+                    menu home = new menu(user);
+                    home.ShowDialog();
+                }
+                else
+                {
+                    dr.Close();
+                    MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
+            }
+            else
+            {
+                MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
