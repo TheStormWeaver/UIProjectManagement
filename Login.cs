@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -25,7 +26,8 @@ namespace ProjectManagement
 
         private void Login_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=DESKTOP-9166LMU;Initial Catalog=ProjectManagementDB;Integrated Security=True");
+            string con = ConfigurationManager.ConnectionStrings["ProjectManagement.Properties.Settings.ProjectManagementDBConnectionString"].ConnectionString;
+            cn = new SqlConnection(con);
             cn.Open();
         }
 
@@ -34,14 +36,16 @@ namespace ProjectManagement
             if (txtPassword.Text != string.Empty || txtUsername.Text != string.Empty)
             {
                 string name = null;
-                cmd = new SqlCommand("select * from [APP_USER] where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", cn);
+                cmd = new SqlCommand("select * from [APP_USER] u JOIN [USER_ROLE] r ON u.ROLE_ID = r.Id where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     CurrentUser user = new CurrentUser();
                     name = dr["username"].ToString();
+                    user.UserRole = dr["Role"].ToString();
                     user.Name = name;
                     dr.Close();
+                    cn.Close();
                     this.Hide();
                     menu home = new menu(user);
                     home.ShowDialog();
@@ -49,6 +53,7 @@ namespace ProjectManagement
                 else
                 {
                     dr.Close();
+
                     MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -59,7 +64,7 @@ namespace ProjectManagement
             }
         }
 
-      
+
         private void regBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -72,14 +77,16 @@ namespace ProjectManagement
             if (txtPassword.Text != string.Empty || txtUsername.Text != string.Empty)
             {
                 string name = null;
-                cmd = new SqlCommand("select * from [APP_USER] where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", cn);
+                cmd = new SqlCommand("select * from [APP_USER] u JOIN [USER_ROLE] r ON u.ROLE_ID = r.Id where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     CurrentUser user = new CurrentUser();
                     name = dr["username"].ToString();
+                    user.UserRole = dr["Role"].ToString();
                     user.Name = name;
                     dr.Close();
+                    cn.Close();
                     this.Hide();
                     menu home = new menu(user);
                     home.ShowDialog();
@@ -87,6 +94,7 @@ namespace ProjectManagement
                 else
                 {
                     dr.Close();
+
                     MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
