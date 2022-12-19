@@ -49,9 +49,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label1.Location = new System.Drawing.Point(319, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 21);
+            this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.label1.Text = "Firstname";
             // 
             // label2
             // 
