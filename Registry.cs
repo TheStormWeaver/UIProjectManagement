@@ -61,14 +61,10 @@ namespace ProjectManagement
                             cmd = new SqlCommand("insert into [EXPERTS] values(" + id + 1 + ", 'E', @username, 'Ganchov', 'Stefanov', " + id + ")", cn);
                             cmd.Parameters.AddWithValue("username", txtUsername.Text);
                             cmd.ExecuteNonQuery();
-                            dr.Close();
-                            cn.Close();
 
                         }
                         else
                         {
-                            dr.Close();
-                            cn.Close();
                             MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
