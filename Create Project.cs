@@ -28,7 +28,7 @@ namespace ProjectManagement
             cn = new SqlConnection(con);
             cn.Open();
 
-            if (txtName.Text != string.Empty || txtDesc.Text != string.Empty || txtCode.Text != string.Empty || txtStartDate.Text != string.Empty || txtEndDate.Text != string.Empty || comboBox2.Text != string.Empty || txtPay.Text != string.Empty)
+            if (txtName.Text != string.Empty || txtDesc.Text != string.Empty || txtCode.Text != string.Empty || txtStartDate.Text != string.Empty || txtEndDate.Text != string.Empty || projectClientcb.Text != string.Empty || txtPay.Text != string.Empty)
             {
                 cmd = new SqlCommand("select * from [PROJECTS] where PROJECT_NAME='" + txtName.Text + "' AND PROJECT_ID = '" + txtCode.Text + "' ", cn);
                 dr = cmd.ExecuteReader();
@@ -44,7 +44,7 @@ namespace ProjectManagement
                     cmd.Parameters.AddWithValue("code", txtCode.Text);
                     cmd.Parameters.AddWithValue("name", txtName.Text);
                     cmd.Parameters.AddWithValue("desc", txtDesc.Text);
-                    cmd.Parameters.AddWithValue("client", comboBox2.Text);
+                    cmd.Parameters.AddWithValue("client", projectClientcb.Text);
                     cmd.Parameters.AddWithValue("startDate", Convert.ToDateTime(txtStartDate.Value.ToString("yyyy-MM-dd")));
                     cmd.Parameters.AddWithValue("endDate", Convert.ToDateTime(txtEndDate.Value.ToString("yyyy-MM-dd")));
                     cmd.Parameters.AddWithValue("pay", txtPay.Text);
@@ -76,12 +76,17 @@ namespace ProjectManagement
             list.Add(name);
             cn.Close();
             dr.Close();
-            comboBox2.DataSource = list;
+            projectClientcb.DataSource = list;
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Create_Project_Load_1(object sender, EventArgs e)
+        {
+            this.projectClientcb.DrawMode = DrawMode.OwnerDrawFixed;
         }
     }
 }

@@ -253,7 +253,7 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "menu";
-            this.Text = "Main Menu";
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.menu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
