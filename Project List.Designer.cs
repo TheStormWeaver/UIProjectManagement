@@ -44,6 +44,10 @@
             this.eXPERTSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.eXPERTSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.projectListGrid = new System.Windows.Forms.DataGridView();
+            this.editProjectStatus = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.projectStatusSearchcb = new System.Windows.Forms.ComboBox();
             this.projectUserSearchcb = new System.Windows.Forms.ComboBox();
@@ -61,17 +65,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pROJECTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTCLIENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTBEGINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTENDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROJECTPAYPERHOURDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editProjectStatus = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pROJECTSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTENDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTBEGINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTCLIENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource1)).BeginInit();
@@ -163,6 +163,9 @@
             this.projectListGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.projectListGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pROJECTIDDataGridViewTextBoxColumn,
+            this.Details,
+            this.Edit,
+            this.Delete,
             this.pROJECTNAMEDataGridViewTextBoxColumn,
             this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn,
             this.pROJECTCLIENTDataGridViewTextBoxColumn,
@@ -170,10 +173,7 @@
             this.pROJECTENDDataGridViewTextBoxColumn,
             this.pROJECTSTATUSDataGridViewTextBoxColumn,
             this.pROJECTPAYPERHOURDataGridViewTextBoxColumn,
-            this.editProjectStatus,
-            this.Details,
-            this.Edit,
-            this.Delete});
+            this.editProjectStatus});
             this.projectListGrid.DataSource = this.pROJECTSBindingSource1;
             this.projectListGrid.EnableHeadersVisualStyles = false;
             this.projectListGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
@@ -190,7 +190,7 @@
             this.projectListGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.projectListGrid.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
@@ -200,6 +200,44 @@
             this.projectListGrid.Size = new System.Drawing.Size(1098, 390);
             this.projectListGrid.TabIndex = 0;
             this.projectListGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectListGrid_CellContentClick);
+            // 
+            // editProjectStatus
+            // 
+            this.editProjectStatus.DataPropertyName = "PROJECT_STATUS";
+            this.editProjectStatus.HeaderText = "Edit Project Status";
+            this.editProjectStatus.Name = "editProjectStatus";
+            this.editProjectStatus.Visible = false;
+            // 
+            // Details
+            // 
+            this.Details.DataPropertyName = "PROJECT_ID";
+            this.Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Details.HeaderText = "Details";
+            this.Details.Name = "Details";
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.Text = "Details";
+            this.Details.ToolTipText = "Details";
+            this.Details.UseColumnTextForButtonValue = true;
+            // 
+            // Edit
+            // 
+            this.Edit.DataPropertyName = "PROJECT_ID";
+            this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Text = "Edit";
+            this.Edit.ToolTipText = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.DataPropertyName = "PROJECT_ID";
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "Delete";
+            this.Delete.ToolTipText = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // label1
             // 
@@ -395,35 +433,11 @@
             this.pROJECTIDDataGridViewTextBoxColumn.HeaderText = "Project Code";
             this.pROJECTIDDataGridViewTextBoxColumn.Name = "pROJECTIDDataGridViewTextBoxColumn";
             // 
-            // pROJECTNAMEDataGridViewTextBoxColumn
+            // pROJECTPAYPERHOURDataGridViewTextBoxColumn
             // 
-            this.pROJECTNAMEDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_NAME";
-            this.pROJECTNAMEDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.pROJECTNAMEDataGridViewTextBoxColumn.Name = "pROJECTNAMEDataGridViewTextBoxColumn";
-            // 
-            // pROJECTDESCRIPTIONDataGridViewTextBoxColumn
-            // 
-            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_DESCRIPTION";
-            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn.Name = "pROJECTDESCRIPTIONDataGridViewTextBoxColumn";
-            // 
-            // pROJECTCLIENTDataGridViewTextBoxColumn
-            // 
-            this.pROJECTCLIENTDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_CLIENT";
-            this.pROJECTCLIENTDataGridViewTextBoxColumn.HeaderText = "Client";
-            this.pROJECTCLIENTDataGridViewTextBoxColumn.Name = "pROJECTCLIENTDataGridViewTextBoxColumn";
-            // 
-            // pROJECTBEGINDataGridViewTextBoxColumn
-            // 
-            this.pROJECTBEGINDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_BEGIN";
-            this.pROJECTBEGINDataGridViewTextBoxColumn.HeaderText = "Start Date";
-            this.pROJECTBEGINDataGridViewTextBoxColumn.Name = "pROJECTBEGINDataGridViewTextBoxColumn";
-            // 
-            // pROJECTENDDataGridViewTextBoxColumn
-            // 
-            this.pROJECTENDDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_END";
-            this.pROJECTENDDataGridViewTextBoxColumn.HeaderText = "End Date";
-            this.pROJECTENDDataGridViewTextBoxColumn.Name = "pROJECTENDDataGridViewTextBoxColumn";
+            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_PAY_PER_HOUR";
+            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn.HeaderText = "Pay Per Hour";
+            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn.Name = "pROJECTPAYPERHOURDataGridViewTextBoxColumn";
             // 
             // pROJECTSTATUSDataGridViewTextBoxColumn
             // 
@@ -431,49 +445,35 @@
             this.pROJECTSTATUSDataGridViewTextBoxColumn.HeaderText = "Status";
             this.pROJECTSTATUSDataGridViewTextBoxColumn.Name = "pROJECTSTATUSDataGridViewTextBoxColumn";
             // 
-            // pROJECTPAYPERHOURDataGridViewTextBoxColumn
+            // pROJECTENDDataGridViewTextBoxColumn
             // 
-            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_PAY_PER_HOUR";
-            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn.HeaderText = "Pay Per Hour";
-            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn.Name = "pROJECTPAYPERHOURDataGridViewTextBoxColumn";
+            this.pROJECTENDDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_END";
+            this.pROJECTENDDataGridViewTextBoxColumn.HeaderText = "End Date";
+            this.pROJECTENDDataGridViewTextBoxColumn.Name = "pROJECTENDDataGridViewTextBoxColumn";
             // 
-            // editProjectStatus
+            // pROJECTBEGINDataGridViewTextBoxColumn
             // 
-            this.editProjectStatus.DataPropertyName = "PROJECT_STATUS";
-            this.editProjectStatus.HeaderText = "Edit Project Status";
-            this.editProjectStatus.Name = "editProjectStatus";
-            this.editProjectStatus.Visible = false;
+            this.pROJECTBEGINDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_BEGIN";
+            this.pROJECTBEGINDataGridViewTextBoxColumn.HeaderText = "Start Date";
+            this.pROJECTBEGINDataGridViewTextBoxColumn.Name = "pROJECTBEGINDataGridViewTextBoxColumn";
             // 
-            // Details
+            // pROJECTCLIENTDataGridViewTextBoxColumn
             // 
-            this.Details.DataPropertyName = "PROJECT_ID";
-            this.Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Details.HeaderText = "Details";
-            this.Details.Name = "Details";
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.Text = "Details";
-            this.Details.ToolTipText = "Details";
-            this.Details.UseColumnTextForButtonValue = true;
+            this.pROJECTCLIENTDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_CLIENT";
+            this.pROJECTCLIENTDataGridViewTextBoxColumn.HeaderText = "Client";
+            this.pROJECTCLIENTDataGridViewTextBoxColumn.Name = "pROJECTCLIENTDataGridViewTextBoxColumn";
             // 
-            // Edit
+            // pROJECTDESCRIPTIONDataGridViewTextBoxColumn
             // 
-            this.Edit.DataPropertyName = "PROJECT_ID";
-            this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "Edit";
-            this.Edit.ToolTipText = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
+            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_DESCRIPTION";
+            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn.Name = "pROJECTDESCRIPTIONDataGridViewTextBoxColumn";
             // 
-            // Delete
+            // pROJECTNAMEDataGridViewTextBoxColumn
             // 
-            this.Delete.DataPropertyName = "PROJECT_ID";
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Text = "Delete";
-            this.Delete.ToolTipText = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
+            this.pROJECTNAMEDataGridViewTextBoxColumn.DataPropertyName = "PROJECT_NAME";
+            this.pROJECTNAMEDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.pROJECTNAMEDataGridViewTextBoxColumn.Name = "pROJECTNAMEDataGridViewTextBoxColumn";
             // 
             // Project_List
             // 
@@ -530,6 +530,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewButtonColumn editProjectStatus;
+        private System.Windows.Forms.DataGridViewButtonColumn Details;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTDESCRIPTIONDataGridViewTextBoxColumn;
@@ -538,9 +542,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTENDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTSTATUSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJECTPAYPERHOURDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn editProjectStatus;
-        private System.Windows.Forms.DataGridViewButtonColumn Details;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

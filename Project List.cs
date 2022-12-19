@@ -26,6 +26,8 @@ namespace ProjectManagement
 
         private void Project_List_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'projectManagementDBDataSet.PROJECT_TASKS' table. You can move, or remove it, as needed.
+            this.pROJECT_TASKSTableAdapter.Fill(this.projectManagementDBDataSet.PROJECT_TASKS);
             // TODO: This line of code loads data into the 'projectManagementDBDataSet.EXPERTS' table. You can move, or remove it, as needed.
             this.eXPERTSTableAdapter.Fill(this.projectManagementDBDataSet.EXPERTS);
             // TODO: This line of code loads data into the 'projectManagementDBDataSet.PROJECTS' table. You can move, or remove it, as needed.
@@ -59,9 +61,13 @@ namespace ProjectManagement
                 if (projectListGrid.CurrentCell != null && projectListGrid.CurrentCell.Value != null)
                 {
                     string projectCode = projectListGrid.Rows[projectListGrid.CurrentRow.Index].Cells[0].FormattedValue.ToString();
+                    int row = projectListGrid.CurrentRow.Index;
+                   // var dt = new P;
                     deleteProject(projectCode);
                     projectListGrid.Refresh();
-                    //projectListGrid.DataSource = ;
+                  //  projectListGrid.Rows.Remove(row);
+                    projectListGrid.DataSource = dt;
+                    projectListGrid.Update();
                 }
             }
             if (projectListGrid.CurrentCell.ColumnIndex.Equals(10) && e.RowIndex != -1)
@@ -120,7 +126,8 @@ namespace ProjectManagement
                 dr.Close();
                 cmd = new SqlCommand("DELETE FROM [PROJECTS]  WHERE PROJECT_ID = '" + projectCode + "'", cn);
                 dr = cmd.ExecuteReader();
-
+                cn.Close();
+                dr.Close();
                 MessageBox.Show("Deleted Project", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -129,8 +136,6 @@ namespace ProjectManagement
                 dr.Close();
                 MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            dr.Close();
-            cn.Close();
         }
     }
 }
