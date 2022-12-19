@@ -72,9 +72,9 @@
             this.LoginBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.LoginBtn.Image = ((System.Drawing.Image)(resources.GetObject("LoginBtn.Image")));
-            this.LoginBtn.Location = new System.Drawing.Point(-18, 283);
+            this.LoginBtn.Location = new System.Drawing.Point(-17, 306);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(218, 43);
+            this.LoginBtn.Size = new System.Drawing.Size(217, 43);
             this.LoginBtn.TabIndex = 17;
             this.LoginBtn.Text = "  Login";
             this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -89,7 +89,7 @@
             this.TasksBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TasksBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.TasksBtn.Image = ((System.Drawing.Image)(resources.GetObject("TasksBtn.Image")));
-            this.TasksBtn.Location = new System.Drawing.Point(-18, 232);
+            this.TasksBtn.Location = new System.Drawing.Point(-18, 251);
             this.TasksBtn.Name = "TasksBtn";
             this.TasksBtn.Size = new System.Drawing.Size(218, 43);
             this.TasksBtn.TabIndex = 16;
@@ -106,9 +106,9 @@
             this.ProjectsBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjectsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.ProjectsBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProjectsBtn.Image")));
-            this.ProjectsBtn.Location = new System.Drawing.Point(-12, 182);
+            this.ProjectsBtn.Location = new System.Drawing.Point(-13, 197);
             this.ProjectsBtn.Name = "ProjectsBtn";
-            this.ProjectsBtn.Size = new System.Drawing.Size(212, 43);
+            this.ProjectsBtn.Size = new System.Drawing.Size(213, 43);
             this.ProjectsBtn.TabIndex = 15;
             this.ProjectsBtn.Text = "  Projects";
             this.ProjectsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,7 +123,7 @@
             this.UsersBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.UsersBtn.Image = ((System.Drawing.Image)(resources.GetObject("UsersBtn.Image")));
-            this.UsersBtn.Location = new System.Drawing.Point(-18, 131);
+            this.UsersBtn.Location = new System.Drawing.Point(-18, 143);
             this.UsersBtn.Name = "UsersBtn";
             this.UsersBtn.Size = new System.Drawing.Size(218, 43);
             this.UsersBtn.TabIndex = 14;
@@ -140,9 +140,9 @@
             this.dashboardBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.dashboardBtn.Image = ((System.Drawing.Image)(resources.GetObject("dashboardBtn.Image")));
-            this.dashboardBtn.Location = new System.Drawing.Point(-3, 80);
+            this.dashboardBtn.Location = new System.Drawing.Point(-5, 89);
             this.dashboardBtn.Name = "dashboardBtn";
-            this.dashboardBtn.Size = new System.Drawing.Size(203, 43);
+            this.dashboardBtn.Size = new System.Drawing.Size(205, 43);
             this.dashboardBtn.TabIndex = 13;
             this.dashboardBtn.Text = "  Dashboard";
             this.dashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,9 +237,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(180, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(736, 440);
+            this.pictureBox1.Size = new System.Drawing.Size(418, 440);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
