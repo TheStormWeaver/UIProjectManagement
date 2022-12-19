@@ -26,15 +26,25 @@ namespace ProjectManagement
 
         private void Project_List_Load(object sender, EventArgs e)
         {
+            cn = new SqlConnection(con);
+            cn.Open();
             // TODO: This line of code loads data into the 'projectManagementDBDataSet.EXPERTS' table. You can move, or remove it, as needed.
             this.eXPERTSTableAdapter.Fill(this.projectManagementDBDataSet.EXPERTS);
             // TODO: This line of code loads data into the 'projectManagementDBDataSet.PROJECTS' table. You can move, or remove it, as needed.
             this.pROJECTSTableAdapter.Fill(this.projectManagementDBDataSet.PROJECTS);
-
+            cmd = new SqlCommand("select * from [PROJECTS]", cn);
+            dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            cn.Close();
+            projectListGrid.DataSource = dt;
+           
         }
 
         private void searchProjectbtn_Click(object sender, EventArgs e)
         {
+
+
             /*
             this.pROJECTSTableAdapter.FillByProjectIDSearch(this.projectManagementDBDataSet.PROJECTS, Convert.ToDecimal(projectIDSearcht.Text));
             this.pROJECTSTableAdapter.FillByProjectDateSearch(this.projectManagementDBDataSet.PROJECTS, projectStartDateSearcht.Text, projectEndDateSearcht.Text);
@@ -120,9 +130,14 @@ namespace ProjectManagement
                 dr.Close();
                 cmd = new SqlCommand("DELETE FROM [PROJECTS]  WHERE PROJECT_ID = '" + projectCode + "'", cn);
                 dr = cmd.ExecuteReader();
-
+                dr.Close();
                 MessageBox.Show("Deleted Project", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                cmd = new SqlCommand("select * from [PROJECTS]", cn);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                projectListGrid.DataSource = dt;
+                projectListGrid.Update();
             }
             else
             {
