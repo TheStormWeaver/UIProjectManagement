@@ -117,6 +117,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(300, 27);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // panel1
             // 
@@ -151,7 +152,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.panel3.Controls.Add(this.txtPassword);
-            this.panel3.Location = new System.Drawing.Point(322, 186);
+            this.panel3.Location = new System.Drawing.Point(322, 189);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 30);
             this.panel3.TabIndex = 26;

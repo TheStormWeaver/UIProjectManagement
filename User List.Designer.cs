@@ -55,15 +55,15 @@
             this.projectManagementDBDataSet1 = new ProjectManagement.ProjectManagementDBDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.typecb = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.firstnamet = new System.Windows.Forms.TextBox();
             this.firstnamel = new System.Windows.Forms.Label();
             this.lastnamet = new System.Windows.Forms.TextBox();
             this.surnamet = new System.Windows.Forms.TextBox();
             this.surnamel = new System.Windows.Forms.Label();
             this.lastnamel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.typecb = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userListGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXPERTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).BeginInit();
@@ -236,7 +236,7 @@
             this.searchProjectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchProjectbtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchProjectbtn.ForeColor = System.Drawing.Color.White;
-            this.searchProjectbtn.Location = new System.Drawing.Point(55, 323);
+            this.searchProjectbtn.Location = new System.Drawing.Point(55, 332);
             this.searchProjectbtn.Name = "searchProjectbtn";
             this.searchProjectbtn.Size = new System.Drawing.Size(103, 28);
             this.searchProjectbtn.TabIndex = 13;
@@ -312,17 +312,28 @@
             this.panel1.Size = new System.Drawing.Size(229, 416);
             this.panel1.TabIndex = 25;
             // 
-            // label2
+            // typecb
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(41, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 30);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Search Users";
+            this.typecb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.typecb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.typecb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typecb.ForeColor = System.Drawing.Color.White;
+            this.typecb.FormattingEnabled = true;
+            this.typecb.Location = new System.Drawing.Point(29, 278);
+            this.typecb.Name = "typecb";
+            this.typecb.Size = new System.Drawing.Size(162, 23);
+            this.typecb.TabIndex = 35;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(26, 253);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Type";
             // 
             // firstnamet
             // 
@@ -390,28 +401,17 @@
             this.lastnamel.TabIndex = 32;
             this.lastnamel.Text = "Lastname";
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(26, 253);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Type";
-            // 
-            // typecb
-            // 
-            this.typecb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.typecb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.typecb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.typecb.ForeColor = System.Drawing.Color.White;
-            this.typecb.FormattingEnabled = true;
-            this.typecb.Location = new System.Drawing.Point(29, 278);
-            this.typecb.Name = "typecb";
-            this.typecb.Size = new System.Drawing.Size(162, 23);
-            this.typecb.TabIndex = 35;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(41, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 30);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Search Users";
             // 
             // User_List
             // 

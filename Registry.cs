@@ -32,11 +32,11 @@ namespace ProjectManagement
 
         private void registryBtn_Click(object sender, EventArgs e)
         {
-            if (txtConfirmPassword.Text != string.Empty || txtPassword.Text != string.Empty || txtUsername.Text != string.Empty)
+            if (txtConfirmPassword.Text != string.Empty || txtPassword.Text != string.Empty || txtFirstname.Text != string.Empty)
             {
                 if (txtPassword.Text == txtConfirmPassword.Text)
                 {
-                    cmd = new SqlCommand("select * from [APP_USER] where username='" + txtUsername.Text + "'", cn);
+                    cmd = new SqlCommand("select * from [APP_USER] where username='" + txtFirstname.Text + "'", cn);
                     dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
@@ -47,11 +47,11 @@ namespace ProjectManagement
                     {
                         dr.Close();
                         cmd = new SqlCommand("insert into [APP_USER] values(@username,@password, 2)", cn);
-                        cmd.Parameters.AddWithValue("username", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("username", txtFirstname.Text);
                         cmd.Parameters.AddWithValue("password", txtPassword.Text);
                         cmd.ExecuteNonQuery();
 
-                        cmd = new SqlCommand("select * from [APP_USER] where username='" + txtUsername.Text + "'", cn);
+                        cmd = new SqlCommand("select * from [APP_USER] where username='" + txtFirstname.Text + "'", cn);
                         dr = cmd.ExecuteReader();
                         if (dr.Read())
                         {
@@ -59,7 +59,7 @@ namespace ProjectManagement
                             id = Int32.Parse(dr["Id"].ToString());
                             dr.Close();
                             cmd = new SqlCommand("insert into [EXPERTS] values(" + id + 1 + ", 'E', @username, 'Ganchov', 'Stefanov', " + id + ")", cn);
-                            cmd.Parameters.AddWithValue("username", txtUsername.Text);
+                            cmd.Parameters.AddWithValue("username", txtFirstname.Text);
                             cmd.ExecuteNonQuery();
 
                         }
