@@ -44,10 +44,28 @@ namespace ProjectManagement
                     else
                     {
                         dr.Close();
-                        cmd = new SqlCommand("insert into [APP_USER] values(@username,@password)", cn);
+                        cmd = new SqlCommand("insert into [APP_USER] values(@username,@password, 2)", cn);
                         cmd.Parameters.AddWithValue("username", txtUsername.Text);
                         cmd.Parameters.AddWithValue("password", txtPassword.Text);
                         cmd.ExecuteNonQuery();
+
+                        cmd = new SqlCommand("select * from [APP_USER] where username='" + txtUsername.Text + "'", cn);
+                        dr = cmd.ExecuteReader();
+                        if (dr.Read())
+                        { 
+                            int id = 0;
+                            id = Int32.Parse(dr["Id"].ToString());
+                            dr.Close();
+                            cmd = new SqlCommand("insert into [EXPERTS] values("+ id+1 +", 'E', @username, 'Ganchov', 'Stefanov', "+ id +")", cn);
+                            cmd.Parameters.AddWithValue("username", txtUsername.Text);
+                            cmd.ExecuteNonQuery();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                         MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }

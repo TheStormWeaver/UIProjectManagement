@@ -248,6 +248,11 @@ namespace ProjectManagement
             {
                 LoginBtn.Text = "  Log out";
                 panelUsername.Text = user.Name;
+                if(user.UserRole == "Expert")
+                {
+                    UsersBtn.Visible = false;
+                }
+                
             }
             else
             {
