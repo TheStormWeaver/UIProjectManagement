@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -24,13 +25,14 @@ namespace ProjectManagement
 
         private void Registry_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=DESKTOP-9166LMU;Initial Catalog=ProjectManagementDB;Integrated Security=True");
+            string con = ConfigurationManager.ConnectionStrings["ProjectManagement.Properties.Settings.ProjectManagementDBConnectionString"].ConnectionString;
+            cn = new SqlConnection(con);
             cn.Open();
         }
 
         private void registryBtn_Click(object sender, EventArgs e)
         {
-            if (txtConfirmPassword.Text != string.Empty || txtPassword.Text != string.Empty || txtUsername.Text != string.Empty)
+            if (txtConfirmPassword.Text != string.Empty || txtPassword.Text != string.Empty || txtUsername.Text != string.Empty || txtFirstname.Text != string.Empty || txtSurname.Text != string.Empty || txtLastname.Text != string.Empty)
             {
                 if (txtPassword.Text == txtConfirmPassword.Text)
                 {
@@ -44,10 +46,30 @@ namespace ProjectManagement
                     else
                     {
                         dr.Close();
-                        cmd = new SqlCommand("insert into [APP_USER] values(@username,@password)", cn);
+                        cmd = new SqlCommand("insert into [APP_USER] values(@username,@password, 2)", cn);
                         cmd.Parameters.AddWithValue("username", txtUsername.Text);
                         cmd.Parameters.AddWithValue("password", txtPassword.Text);
                         cmd.ExecuteNonQuery();
+
+                        cmd = new SqlCommand("select * from [APP_USER] where username='" + txtUsername.Text + "'", cn);
+                        dr = cmd.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            int id = 0;
+                            id = Int32.Parse(dr["Id"].ToString());
+                            dr.Close();
+                            cmd = new SqlCommand("insert into [EXPERTS] values(" + id + 1 + ", 'E', @firstname, @surname, @lasttname, " + id + ")", cn);
+                            cmd.Parameters.AddWithValue("firstname", txtFirstname.Text);
+                            cmd.Parameters.AddWithValue("surname", txtSurname.Text);
+                            cmd.Parameters.AddWithValue("lasttname", txtLastname.Text);
+                            cmd.ExecuteNonQuery();
+                            cn.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                         MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }

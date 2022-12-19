@@ -9,5 +9,9 @@ namespace ProjectManagement.Models
     public class CurrentUser
     {
         public string Name { get; set; }
+
+        public string UserRole { get; set; }
+
+        public int Role { get; set; }
     }
 }

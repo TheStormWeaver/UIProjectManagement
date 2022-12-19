@@ -212,6 +212,9 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
@@ -220,6 +223,7 @@
             this.lblTitle.Size = new System.Drawing.Size(64, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Home";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelDesktopPane
             // 
@@ -249,7 +253,7 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "menu";
-            this.Text = "Main Menu";
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.menu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

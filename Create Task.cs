@@ -16,5 +16,20 @@ namespace ProjectManagement
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taskNamet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taskDescrt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

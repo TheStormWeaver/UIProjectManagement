@@ -36,6 +36,7 @@
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -78,6 +79,12 @@
     <Compile Include="Edit Project Status.Designer.cs">
       <DependentUpon>Edit Project Status.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +104,12 @@
     </Compile>
     <Compile Include="Project List.Designer.cs">
       <DependentUpon>Project List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectEdit.Designer.cs">
+      <DependentUpon>ProjectEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjectManagementDBDataSet.cs">
       <DependentUpon>ProjectManagementDBDataSet.xsd</DependentUpon>
@@ -124,6 +137,12 @@
     </Compile>
     <Compile Include="Task List.Designer.cs">
       <DependentUpon>Task List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskEdit.Designer.cs">
+      <DependentUpon>TaskEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="User Details.cs">
@@ -159,6 +178,9 @@
     <EmbeddedResource Include="Edit Project Status.resx">
       <DependentUpon>Edit Project Status.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Project List.resx">
       <DependentUpon>Project List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectEdit.resx">
+      <DependentUpon>ProjectEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -185,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Task List.resx">
       <DependentUpon>Task List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskEdit.resx">
+      <DependentUpon>TaskEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Details.resx">
       <DependentUpon>User Details.cs</DependentUpon>

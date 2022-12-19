@@ -29,270 +29,242 @@
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtStartDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtDesc = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtEndDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.projectClientcb = new System.Windows.Forms.ComboBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPay = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 259);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(48, 302);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "Start Date";
             // 
-            // dateTimePicker2
+            // txtStartDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(38, 281);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(135, 20);
-            this.dateTimePicker2.TabIndex = 10;
+            this.txtStartDate.Location = new System.Drawing.Point(51, 324);
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(117, 20);
+            this.txtStartDate.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 207);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(49, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(78, 15);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Status:";
+            this.label4.Text = "Project Code:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
+            // txtDesc
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(39, 226);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 21);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(38, 98);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(307, 96);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.txtDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.txtDesc.ForeColor = System.Drawing.Color.White;
+            this.txtDesc.Location = new System.Drawing.Point(51, 139);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(271, 96);
+            this.txtDesc.TabIndex = 4;
+            this.txtDesc.Text = "";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 81);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(49, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(70, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Description:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(199, 259);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(206, 302);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 19;
             this.label2.Text = "End Date";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dateTimePicker1
+            // txtEndDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(202, 281);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(143, 20);
-            this.dateTimePicker1.TabIndex = 20;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.txtEndDate.Location = new System.Drawing.Point(209, 324);
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.Size = new System.Drawing.Size(113, 20);
+            this.txtEndDate.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 32);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(49, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Project Name:";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(51, 88);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(271, 23);
+            this.txtName.TabIndex = 2;
             // 
-            // groupBox3
+            // projectClientcb
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.richTextBox1);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(21, 14);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(374, 335);
-            this.groupBox3.TabIndex = 24;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Porject Information";
+            this.projectClientcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectClientcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectClientcb.FormattingEnabled = true;
+            this.projectClientcb.Location = new System.Drawing.Point(52, 379);
+            this.projectClientcb.Name = "projectClientcb";
+            this.projectClientcb.Size = new System.Drawing.Size(116, 21);
+            this.projectClientcb.TabIndex = 6;
             // 
-            // button2
+            // txtCode
             // 
-            this.button2.Location = new System.Drawing.Point(22, 535);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Create Project";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Project Task";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(201, 48);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(134, 21);
-            this.comboBox4.TabIndex = 17;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(38, 48);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(134, 21);
-            this.comboBox3.TabIndex = 15;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(201, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 20);
-            this.textBox2.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(198, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Assigned Expert";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(198, 84);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Pay Per Hour";
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.txtCode.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtCode.ForeColor = System.Drawing.Color.White;
+            this.txtCode.Location = new System.Drawing.Point(52, 266);
+            this.txtCode.Multiline = true;
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(270, 23);
+            this.txtCode.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 84);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(49, 358);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.Size = new System.Drawing.Size(38, 15);
             this.label6.TabIndex = 7;
             this.label6.Text = "Client";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // comboBox2
+            // label7
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(38, 107);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(134, 21);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(206, 356);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 15);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Pay Per Hour";
             // 
-            // groupBox4
+            // txtPay
             // 
-            this.groupBox4.Controls.Add(this.comboBox2);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.comboBox3);
-            this.groupBox4.Controls.Add(this.comboBox4);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Location = new System.Drawing.Point(22, 365);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(373, 151);
-            this.groupBox4.TabIndex = 25;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Additional Information";
+            this.txtPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.txtPay.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtPay.ForeColor = System.Drawing.Color.White;
+            this.txtPay.Location = new System.Drawing.Point(209, 376);
+            this.txtPay.Multiline = true;
+            this.txtPay.Name = "txtPay";
+            this.txtPay.Size = new System.Drawing.Size(113, 23);
+            this.txtPay.TabIndex = 13;
+            
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(126, 431);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 26);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Create Project";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(92, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(199, 32);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Project Creation";
             // 
             // Create_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 574);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.ClientSize = new System.Drawing.Size(391, 483);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.projectClientcb);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtStartDate);
+            this.Controls.Add(this.txtPay);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.txtEndDate);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Name = "Create_Project";
-            this.Text = "Create_Project";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.Text = "Create Project";
+            this.Load += new System.EventHandler(this.Create_Project_Load_1);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker txtStartDate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtDesc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtEndDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPay;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox projectClientcb;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.Label label8;
     }
 }

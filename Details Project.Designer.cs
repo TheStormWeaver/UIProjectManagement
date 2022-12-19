@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Details_Project));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -78,19 +81,7 @@
             this.eXPERTSTableAdapter = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.EXPERTSTableAdapter();
             this.tableAdapterManager = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.TableAdapterManager();
             this.pROJECT_TASKSTableAdapter = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.PROJECT_TASKSTableAdapter();
-            this.eXPERTSBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.eXPERTSBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -100,8 +91,6 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eXPERTSBindingNavigator)).BeginInit();
-            this.eXPERTSBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -109,14 +98,17 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(25, 33);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControl1.Location = new System.Drawing.Point(49, 21);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(454, 450);
+            this.tabControl1.Size = new System.Drawing.Size(450, 510);
             this.tabControl1.TabIndex = 30;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.textBox1);
@@ -136,49 +128,61 @@
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.textBox6);
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(446, 424);
+            this.tabPage1.Size = new System.Drawing.Size(442, 482);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Project Details";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(200, 387);
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(223, 431);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(117, 20);
+            this.textBox3.Size = new System.Drawing.Size(121, 23);
             this.textBox3.TabIndex = 48;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(201, 368);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(220, 412);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 47;
             this.label2.Text = "Total Hours";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 224);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(74, 374);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 20);
+            this.textBox1.Size = new System.Drawing.Size(112, 23);
             this.textBox1.TabIndex = 46;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 205);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(71, 355);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 45;
             this.label1.Text = "Number Of Tasks";
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(51, 86);
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBox2.ForeColor = System.Drawing.Color.White;
+            this.richTextBox2.Location = new System.Drawing.Point(74, 130);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(270, 105);
             this.richTextBox2.TabIndex = 44;
@@ -187,115 +191,142 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(50, 368);
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(71, 412);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
+            this.label9.Size = new System.Drawing.Size(95, 15);
             this.label9.TabIndex = 43;
             this.label9.Text = "Total Sum Owed";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(51, 387);
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(74, 431);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 20);
+            this.textBox2.Size = new System.Drawing.Size(112, 23);
             this.textBox2.TabIndex = 42;
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(54, 279);
+            this.dateTimePicker3.Location = new System.Drawing.Point(74, 322);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(111, 20);
+            this.dateTimePicker3.Size = new System.Drawing.Size(112, 23);
             this.dateTimePicker3.TabIndex = 41;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 260);
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(71, 303);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 13);
+            this.label10.Size = new System.Drawing.Size(55, 15);
             this.label10.TabIndex = 40;
             this.label10.Text = "End Date";
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(53, 223);
+            this.comboBox2.Location = new System.Drawing.Point(74, 266);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(112, 21);
+            this.comboBox2.Size = new System.Drawing.Size(112, 23);
             this.comboBox2.TabIndex = 38;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(50, 204);
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(71, 248);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 13);
+            this.label11.Size = new System.Drawing.Size(40, 15);
             this.label11.TabIndex = 39;
             this.label11.Text = "Status";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimePicker4
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(200, 279);
+            this.dateTimePicker4.Location = new System.Drawing.Point(223, 323);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(117, 20);
+            this.dateTimePicker4.Size = new System.Drawing.Size(121, 23);
             this.dateTimePicker4.TabIndex = 37;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(201, 261);
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(220, 305);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 13);
+            this.label12.Size = new System.Drawing.Size(60, 15);
             this.label12.TabIndex = 36;
             this.label12.Text = "Start Date";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(53, 335);
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox5.ForeColor = System.Drawing.Color.White;
+            this.textBox5.Location = new System.Drawing.Point(224, 266);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(109, 20);
+            this.textBox5.Size = new System.Drawing.Size(120, 23);
             this.textBox5.TabIndex = 35;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(54, 318);
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(220, 248);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 13);
+            this.label13.Size = new System.Drawing.Size(37, 15);
             this.label13.TabIndex = 34;
-            this.label13.Text = "Project  Client:";
+            this.label13.Text = "Client";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(-21, 179);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 13);
+            this.label14.Size = new System.Drawing.Size(0, 15);
             this.label14.TabIndex = 33;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(48, 65);
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(71, 109);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 13);
+            this.label15.Size = new System.Drawing.Size(111, 15);
             this.label15.TabIndex = 32;
             this.label15.Text = "Project Description:";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(51, 35);
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.ForeColor = System.Drawing.Color.White;
+            this.textBox6.Location = new System.Drawing.Point(74, 76);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(270, 20);
+            this.textBox6.Size = new System.Drawing.Size(270, 23);
             this.textBox6.TabIndex = 31;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(48, 15);
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(71, 56);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(74, 13);
+            this.label16.Size = new System.Drawing.Size(82, 15);
             this.label16.TabIndex = 30;
             this.label16.Text = "Project Name:";
             // 
@@ -303,10 +334,10 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.eXPERTSDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(446, 424);
+            this.tabPage2.Size = new System.Drawing.Size(442, 482);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Project Users";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -314,7 +345,18 @@
             // eXPERTSDataGridView
             // 
             this.eXPERTSDataGridView.AutoGenerateColumns = false;
-            this.eXPERTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.eXPERTSDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
+            this.eXPERTSDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.eXPERTSDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.eXPERTSDataGridView.ColumnHeadersHeight = 35;
+            this.eXPERTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.eXPERTSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3,
@@ -322,9 +364,15 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn2});
             this.eXPERTSDataGridView.DataSource = this.eXPERTSBindingSource;
+            this.eXPERTSDataGridView.EnableHeadersVisualStyles = false;
+            this.eXPERTSDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.eXPERTSDataGridView.Location = new System.Drawing.Point(0, 0);
             this.eXPERTSDataGridView.Name = "eXPERTSDataGridView";
-            this.eXPERTSDataGridView.Size = new System.Drawing.Size(445, 421);
+            this.eXPERTSDataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.eXPERTSDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.eXPERTSDataGridView.Size = new System.Drawing.Size(442, 482);
             this.eXPERTSDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -371,10 +419,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.pROJECT_TASKSDataGridView);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(446, 424);
+            this.tabPage3.Size = new System.Drawing.Size(442, 482);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Project Tasks";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -382,7 +430,18 @@
             // pROJECT_TASKSDataGridView
             // 
             this.pROJECT_TASKSDataGridView.AutoGenerateColumns = false;
-            this.pROJECT_TASKSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pROJECT_TASKSDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
+            this.pROJECT_TASKSDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pROJECT_TASKSDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.pROJECT_TASKSDataGridView.ColumnHeadersHeight = 42;
+            this.pROJECT_TASKSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.pROJECT_TASKSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
@@ -397,9 +456,15 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17});
             this.pROJECT_TASKSDataGridView.DataSource = this.pROJECT_TASKSBindingSource;
-            this.pROJECT_TASKSDataGridView.Location = new System.Drawing.Point(-4, 0);
+            this.pROJECT_TASKSDataGridView.EnableHeadersVisualStyles = false;
+            this.pROJECT_TASKSDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.pROJECT_TASKSDataGridView.Location = new System.Drawing.Point(0, 0);
             this.pROJECT_TASKSDataGridView.Name = "pROJECT_TASKSDataGridView";
-            this.pROJECT_TASKSDataGridView.Size = new System.Drawing.Size(944, 424);
+            this.pROJECT_TASKSDataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.pROJECT_TASKSDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.pROJECT_TASKSDataGridView.Size = new System.Drawing.Size(446, 486);
             this.pROJECT_TASKSDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn6
@@ -500,140 +565,27 @@
             // 
             this.pROJECT_TASKSTableAdapter.ClearBeforeFill = true;
             // 
-            // eXPERTSBindingNavigator
+            // label8
             // 
-            this.eXPERTSBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.eXPERTSBindingNavigator.BindingSource = this.eXPERTSBindingSource;
-            this.eXPERTSBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.eXPERTSBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.eXPERTSBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.eXPERTSBindingNavigatorSaveItem});
-            this.eXPERTSBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.eXPERTSBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.eXPERTSBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.eXPERTSBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.eXPERTSBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.eXPERTSBindingNavigator.Name = "eXPERTSBindingNavigator";
-            this.eXPERTSBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.eXPERTSBindingNavigator.Size = new System.Drawing.Size(1000, 25);
-            this.eXPERTSBindingNavigator.TabIndex = 31;
-            this.eXPERTSBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // eXPERTSBindingNavigatorSaveItem
-            // 
-            this.eXPERTSBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.eXPERTSBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("eXPERTSBindingNavigatorSaveItem.Image")));
-            this.eXPERTSBindingNavigatorSaveItem.Name = "eXPERTSBindingNavigatorSaveItem";
-            this.eXPERTSBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.eXPERTSBindingNavigatorSaveItem.Text = "Save Data";
-            this.eXPERTSBindingNavigatorSaveItem.Click += new System.EventHandler(this.eXPERTSBindingNavigatorSaveItem_Click);
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(132, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 30);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "Project Details";
             // 
             // Details_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 495);
-            this.Controls.Add(this.eXPERTSBindingNavigator);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.ClientSize = new System.Drawing.Size(549, 558);
             this.Controls.Add(this.tabControl1);
             this.Name = "Details_Project";
-            this.Text = "Details_Project";
+            this.Text = "Project Details";
             this.Load += new System.EventHandler(this.Details_Project_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -645,11 +597,7 @@
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eXPERTSBindingNavigator)).EndInit();
-            this.eXPERTSBindingNavigator.ResumeLayout(false);
-            this.eXPERTSBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -681,19 +629,6 @@
         private System.Windows.Forms.BindingSource eXPERTSBindingSource;
         private ProjectManagementDBDataSetTableAdapters.EXPERTSTableAdapter eXPERTSTableAdapter;
         private ProjectManagementDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator eXPERTSBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton eXPERTSBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView eXPERTSDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -716,5 +651,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.Label label8;
     }
 }
