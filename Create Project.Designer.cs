@@ -190,6 +190,7 @@
             this.txtPay.Name = "txtPay";
             this.txtPay.Size = new System.Drawing.Size(113, 23);
             this.txtPay.TabIndex = 13;
+            
             // 
             // button2
             // 
@@ -214,7 +215,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(92, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(200, 32);
+            this.label8.Size = new System.Drawing.Size(199, 32);
             this.label8.TabIndex = 27;
             this.label8.Text = "Project Creation";
             // 

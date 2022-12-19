@@ -46,7 +46,8 @@ namespace ProjectManagement
                     user.Name = name;
                     dr.Close();
                     cn.Close();
-                    this.Hide();
+                    //this.Hide();
+                    this.Close();
                     menu home = new menu(user);
                     home.ShowDialog();
                 }

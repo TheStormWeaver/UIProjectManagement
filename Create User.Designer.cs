@@ -36,6 +36,7 @@
             this.lastnamet = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.expertsTableAdapter1 = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.EXPERTSTableAdapter();
             this.SuspendLayout();
             // 
             // firstnamel
@@ -81,6 +82,7 @@
             this.surnamet.Name = "surnamet";
             this.surnamet.Size = new System.Drawing.Size(162, 24);
             this.surnamet.TabIndex = 4;
+            this.surnamet.TextChanged += new System.EventHandler(this.surnamet_TextChanged);
             // 
             // lastnamel
             // 
@@ -119,6 +121,7 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Create User";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -128,9 +131,13 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(110, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 32);
+            this.label3.Size = new System.Drawing.Size(169, 32);
             this.label3.TabIndex = 25;
             this.label3.Text = "User Creation";
+            // 
+            // expertsTableAdapter1
+            // 
+            this.expertsTableAdapter1.ClearBeforeFill = true;
             // 
             // User
             // 
@@ -148,6 +155,7 @@
             this.Controls.Add(this.lastnamel);
             this.Name = "User";
             this.Text = "Create User";
+            this.Load += new System.EventHandler(this.User_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +171,6 @@
         private System.Windows.Forms.TextBox lastnamet;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private ProjectManagementDBDataSetTableAdapters.EXPERTSTableAdapter expertsTableAdapter1;
     }
 }

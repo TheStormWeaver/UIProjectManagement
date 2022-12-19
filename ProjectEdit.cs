@@ -75,7 +75,70 @@ if (txtTitle.Text != string.Empty||txtDescription.Tex!= string.Empty||txtEndDate
 
         private void ProjectEdit_Load(object sender, EventArgs e)
         {
+            cn = new SqlConnection(con);
+            cn.Open();
 
+            cmd = new SqlCommand("select * from [PROJECTS] where PROJECT_ID='" + projectCode + "'", cn);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                txtName.Text = dr["PROJECT_NAME"].ToString();
+                txtDesc.Text = dr["PROJECT_DESCRIPTION"].ToString();
+                txtEndDate.Text = dr["PROJECT_END"].ToString();
+                txtPay.Text = dr["PROJECT_PAY_PER_HOUR"].ToString();
+                //     txtPrice = dr["PROJECT_PEY_PER_HOUR"].ToString();
+            }
+            cn.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cn = new SqlConnection(con);
+            cn.Open();
+
+            if (txtName.Text != string.Empty || txtDesc.Text != string.Empty || txtEndDate.Text != string.Empty)
+            {
+                cmd = new SqlCommand("select * from [PROJECTS] where PROJECT_ID = '" + projectCode + "' ", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    dr.Close();
+                    cmd = new SqlCommand("Update [PROJECTS] Set PROJECT_NAME =@name, PROJECT_DESCRIPTION =@desc, PROJECT_END =@endDate, PROJECT_PAY_PER_HOUR =@pay Where PROJECT_ID = '" + projectCode + "' ", cn);
+                    cmd.Parameters.AddWithValue("name", txtName.Text);
+                    cmd.Parameters.AddWithValue("desc", txtDesc.Text);
+                    cmd.Parameters.AddWithValue("endDate", Convert.ToDateTime(txtEndDate.Value.ToString("yyyy-MM-dd")));
+                    cmd.Parameters.AddWithValue("pay", txtPay.Text);
+                    cmd.ExecuteNonQuery();
+                    dr.Close();
+                }
+                else
+                {
+
+                }
+                MessageBox.Show("Successfully updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cn.Close();
+                this.Close();
+            }
+        }
+
+        private void txtEndDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPay_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

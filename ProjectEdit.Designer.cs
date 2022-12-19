@@ -54,7 +54,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(127, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(147, 32);
+            this.label8.Size = new System.Drawing.Size(146, 32);
             this.label8.TabIndex = 43;
             this.label8.Text = "Edit Project";
             // 
@@ -81,6 +81,7 @@
             this.button2.TabIndex = 42;
             this.button2.Text = "Save Changes";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtCode
             // 
@@ -147,6 +148,7 @@
             this.txtPay.Name = "txtPay";
             this.txtPay.Size = new System.Drawing.Size(113, 23);
             this.txtPay.TabIndex = 37;
+            //this.txtPay.TextChanged += new System.EventHandler(this.txtPay_TextChanged);
             // 
             // label4
             // 
@@ -176,6 +178,7 @@
             this.txtEndDate.Name = "txtEndDate";
             this.txtEndDate.Size = new System.Drawing.Size(113, 20);
             this.txtEndDate.TabIndex = 40;
+            this.txtEndDate.ValueChanged += new System.EventHandler(this.txtEndDate_ValueChanged);
             // 
             // label3
             // 
