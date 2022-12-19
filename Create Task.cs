@@ -21,5 +21,15 @@ namespace ProjectManagement
         {
 
         }
+
+        private void taskNamet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taskDescrt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

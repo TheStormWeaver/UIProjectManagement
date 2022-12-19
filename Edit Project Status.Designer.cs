@@ -35,12 +35,23 @@
             this.pROJECT_STATUSTableAdapter = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.PROJECT_STATUSTableAdapter();
             this.tableAdapterManager = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.TableAdapterManager();
             this.projectStatusSavebtn = new System.Windows.Forms.Button();
-            this.projectStatusCancelbtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             pSTATUS_IDLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_STATUSBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pSTATUS_IDLabel
+            // 
+            pSTATUS_IDLabel.AutoSize = true;
+            pSTATUS_IDLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            pSTATUS_IDLabel.ForeColor = System.Drawing.Color.White;
+            pSTATUS_IDLabel.Location = new System.Drawing.Point(45, 82);
+            pSTATUS_IDLabel.Name = "pSTATUS_IDLabel";
+            pSTATUS_IDLabel.Size = new System.Drawing.Size(87, 17);
+            pSTATUS_IDLabel.TabIndex = 1;
+            pSTATUS_IDLabel.Text = "Project Status";
             // 
             // projectManagementDBDataSet
             // 
@@ -68,52 +79,54 @@
             // 
             // projectStatusSavebtn
             // 
-            this.projectStatusSavebtn.Location = new System.Drawing.Point(22, 75);
+            this.projectStatusSavebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.projectStatusSavebtn.FlatAppearance.BorderSize = 0;
+            this.projectStatusSavebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectStatusSavebtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.projectStatusSavebtn.ForeColor = System.Drawing.Color.White;
+            this.projectStatusSavebtn.Location = new System.Drawing.Point(113, 154);
             this.projectStatusSavebtn.Name = "projectStatusSavebtn";
-            this.projectStatusSavebtn.Size = new System.Drawing.Size(70, 23);
+            this.projectStatusSavebtn.Size = new System.Drawing.Size(70, 29);
             this.projectStatusSavebtn.TabIndex = 5;
             this.projectStatusSavebtn.Text = "Save";
-            this.projectStatusSavebtn.UseVisualStyleBackColor = true;
+            this.projectStatusSavebtn.UseVisualStyleBackColor = false;
             this.projectStatusSavebtn.Click += new System.EventHandler(this.projectStatusSavebtn_Click);
-            // 
-            // projectStatusCancelbtn
-            // 
-            this.projectStatusCancelbtn.Location = new System.Drawing.Point(109, 75);
-            this.projectStatusCancelbtn.Name = "projectStatusCancelbtn";
-            this.projectStatusCancelbtn.Size = new System.Drawing.Size(70, 23);
-            this.projectStatusCancelbtn.TabIndex = 6;
-            this.projectStatusCancelbtn.Text = "Cancel";
-            this.projectStatusCancelbtn.UseVisualStyleBackColor = true;
-            this.projectStatusCancelbtn.Click += new System.EventHandler(this.projectStatusCancelbtn_Click);
-            // 
-            // pSTATUS_IDLabel
-            // 
-            pSTATUS_IDLabel.AutoSize = true;
-            pSTATUS_IDLabel.Location = new System.Drawing.Point(19, 18);
-            pSTATUS_IDLabel.Name = "pSTATUS_IDLabel";
-            pSTATUS_IDLabel.Size = new System.Drawing.Size(73, 13);
-            pSTATUS_IDLabel.TabIndex = 1;
-            pSTATUS_IDLabel.Text = "Project Status";
             // 
             // comboBox1
             // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 42);
+            this.comboBox1.Location = new System.Drawing.Point(48, 108);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 21);
+            this.comboBox1.Size = new System.Drawing.Size(217, 23);
             this.comboBox1.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(46, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(223, 32);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Edit Project Status";
             // 
             // Edit_Project_Status
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(219, 120);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.ClientSize = new System.Drawing.Size(303, 224);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(pSTATUS_IDLabel);
-            this.Controls.Add(this.projectStatusCancelbtn);
             this.Controls.Add(this.projectStatusSavebtn);
             this.Name = "Edit_Project_Status";
-            this.Text = "Edit_Project_Status";
+            this.Text = "Edit Project Status";
             this.Load += new System.EventHandler(this.Edit_Project_Status_Load);
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_STATUSBindingSource)).EndInit();
@@ -129,7 +142,7 @@
         private ProjectManagementDBDataSetTableAdapters.PROJECT_STATUSTableAdapter pROJECT_STATUSTableAdapter;
         private ProjectManagementDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button projectStatusSavebtn;
-        private System.Windows.Forms.Button projectStatusCancelbtn;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

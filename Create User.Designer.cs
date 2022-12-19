@@ -34,120 +34,122 @@
             this.surnamet = new System.Windows.Forms.TextBox();
             this.lastnamel = new System.Windows.Forms.Label();
             this.lastnamet = new System.Windows.Forms.TextBox();
-            this.typel = new System.Windows.Forms.Label();
-            this.typecb = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // firstnamel
             // 
             this.firstnamel.AutoSize = true;
-            this.firstnamel.Location = new System.Drawing.Point(23, 27);
+            this.firstnamel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.firstnamel.ForeColor = System.Drawing.Color.White;
+            this.firstnamel.Location = new System.Drawing.Point(110, 71);
             this.firstnamel.Name = "firstnamel";
-            this.firstnamel.Size = new System.Drawing.Size(52, 13);
+            this.firstnamel.Size = new System.Drawing.Size(64, 17);
             this.firstnamel.TabIndex = 3;
             this.firstnamel.Text = "Firstname";
             // 
             // firstnamet
             // 
-            this.firstnamet.Location = new System.Drawing.Point(26, 46);
+            this.firstnamet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.firstnamet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.firstnamet.ForeColor = System.Drawing.Color.White;
+            this.firstnamet.Location = new System.Drawing.Point(113, 95);
+            this.firstnamet.Multiline = true;
             this.firstnamet.Name = "firstnamet";
-            this.firstnamet.Size = new System.Drawing.Size(86, 20);
+            this.firstnamet.Size = new System.Drawing.Size(164, 24);
             this.firstnamet.TabIndex = 2;
             // 
             // surnamel
             // 
             this.surnamel.AutoSize = true;
-            this.surnamel.Location = new System.Drawing.Point(128, 24);
+            this.surnamel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnamel.ForeColor = System.Drawing.Color.White;
+            this.surnamel.Location = new System.Drawing.Point(110, 132);
             this.surnamel.Name = "surnamel";
-            this.surnamel.Size = new System.Drawing.Size(49, 13);
+            this.surnamel.Size = new System.Drawing.Size(59, 17);
             this.surnamel.TabIndex = 5;
             this.surnamel.Text = "Surname";
             // 
             // surnamet
             // 
-            this.surnamet.Location = new System.Drawing.Point(131, 45);
+            this.surnamet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.surnamet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnamet.ForeColor = System.Drawing.Color.White;
+            this.surnamet.Location = new System.Drawing.Point(113, 156);
+            this.surnamet.Multiline = true;
             this.surnamet.Name = "surnamet";
-            this.surnamet.Size = new System.Drawing.Size(84, 20);
+            this.surnamet.Size = new System.Drawing.Size(162, 24);
             this.surnamet.TabIndex = 4;
             // 
             // lastnamel
             // 
             this.lastnamel.AutoSize = true;
-            this.lastnamel.Location = new System.Drawing.Point(232, 27);
+            this.lastnamel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lastnamel.ForeColor = System.Drawing.Color.White;
+            this.lastnamel.Location = new System.Drawing.Point(110, 193);
             this.lastnamel.Name = "lastnamel";
-            this.lastnamel.Size = new System.Drawing.Size(53, 13);
+            this.lastnamel.Size = new System.Drawing.Size(63, 17);
             this.lastnamel.TabIndex = 7;
             this.lastnamel.Text = "Lastname";
             this.lastnamel.Click += new System.EventHandler(this.lastnamel_Click);
             // 
             // lastnamet
             // 
-            this.lastnamet.Location = new System.Drawing.Point(235, 45);
+            this.lastnamet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.lastnamet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lastnamet.ForeColor = System.Drawing.Color.White;
+            this.lastnamet.Location = new System.Drawing.Point(113, 216);
+            this.lastnamet.Multiline = true;
             this.lastnamet.Name = "lastnamet";
-            this.lastnamet.Size = new System.Drawing.Size(78, 20);
+            this.lastnamet.Size = new System.Drawing.Size(162, 24);
             this.lastnamet.TabIndex = 6;
             this.lastnamet.TextChanged += new System.EventHandler(this.lastnamet_TextChanged);
             // 
-            // typel
-            // 
-            this.typel.AutoSize = true;
-            this.typel.Location = new System.Drawing.Point(23, 85);
-            this.typel.Name = "typel";
-            this.typel.Size = new System.Drawing.Size(31, 13);
-            this.typel.TabIndex = 9;
-            this.typel.Text = "Type";
-            this.typel.Click += new System.EventHandler(this.typel_Click);
-            // 
-            // typecb
-            // 
-            this.typecb.FormattingEnabled = true;
-            this.typecb.Location = new System.Drawing.Point(26, 106);
-            this.typecb.Name = "typecb";
-            this.typecb.Size = new System.Drawing.Size(86, 21);
-            this.typecb.TabIndex = 10;
-            this.typecb.SelectedIndexChanged += new System.EventHandler(this.typecb_SelectedIndexChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.firstnamet);
-            this.groupBox1.Controls.Add(this.typecb);
-            this.groupBox1.Controls.Add(this.firstnamel);
-            this.groupBox1.Controls.Add(this.typel);
-            this.groupBox1.Controls.Add(this.surnamet);
-            this.groupBox1.Controls.Add(this.lastnamel);
-            this.groupBox1.Controls.Add(this.surnamel);
-            this.groupBox1.Controls.Add(this.lastnamet);
-            this.groupBox1.Location = new System.Drawing.Point(23, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(348, 148);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "User Creation";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 177);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(144, 266);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
+            this.button1.Size = new System.Drawing.Size(98, 27);
             this.button1.TabIndex = 24;
             this.button1.Text = "Create User";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(110, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 32);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "User Creation";
             // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 221);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.ClientSize = new System.Drawing.Size(387, 323);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.firstnamet);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.firstnamel);
+            this.Controls.Add(this.lastnamet);
+            this.Controls.Add(this.surnamet);
+            this.Controls.Add(this.surnamel);
+            this.Controls.Add(this.lastnamel);
             this.Name = "User";
-            this.Text = "User";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Text = "Create User";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -159,9 +161,7 @@
         private System.Windows.Forms.TextBox surnamet;
         private System.Windows.Forms.Label lastnamel;
         private System.Windows.Forms.TextBox lastnamet;
-        private System.Windows.Forms.Label typel;
-        private System.Windows.Forms.ComboBox typecb;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }

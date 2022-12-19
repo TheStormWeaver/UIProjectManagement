@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label eXPERT_LASTNAMELabel;
-            System.Windows.Forms.Label eXPERT_SURNAMELabel;
-            System.Windows.Forms.Label eXPERT_NAMELabel;
             System.Windows.Forms.Label eXPERT_TYPELabel;
             System.Windows.Forms.Label label1;
             this.eXPERTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -41,15 +38,15 @@
             this.tableAdapterManager = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.TableAdapterManager();
             this.pROJECTSTableAdapter = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.PROJECTSTableAdapter();
             this.expertsTableAdapter1 = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.EXPERTSTableAdapter();
-            this.eXPERT_LASTNAMETextBox = new System.Windows.Forms.TextBox();
-            this.eXPERT_SURNAMETextBox = new System.Windows.Forms.TextBox();
-            this.eXPERT_NAMETextBox = new System.Windows.Forms.TextBox();
-            this.eXPERT_TYPETextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            eXPERT_LASTNAMELabel = new System.Windows.Forms.Label();
-            eXPERT_SURNAMELabel = new System.Windows.Forms.Label();
-            eXPERT_NAMELabel = new System.Windows.Forms.Label();
+            this.typet = new System.Windows.Forms.TextBox();
+            this.assignedProjectst = new System.Windows.Forms.TextBox();
+            this.firstnamet = new System.Windows.Forms.TextBox();
+            this.firstnamel = new System.Windows.Forms.Label();
+            this.lastnamet = new System.Windows.Forms.TextBox();
+            this.surnamet = new System.Windows.Forms.TextBox();
+            this.surnamel = new System.Windows.Forms.Label();
+            this.lastnamel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             eXPERT_TYPELabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.eXPERTSBindingSource)).BeginInit();
@@ -57,41 +54,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // eXPERT_LASTNAMELabel
-            // 
-            eXPERT_LASTNAMELabel.AutoSize = true;
-            eXPERT_LASTNAMELabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            eXPERT_LASTNAMELabel.Location = new System.Drawing.Point(581, 43);
-            eXPERT_LASTNAMELabel.Name = "eXPERT_LASTNAMELabel";
-            eXPERT_LASTNAMELabel.Size = new System.Drawing.Size(53, 13);
-            eXPERT_LASTNAMELabel.TabIndex = 8;
-            eXPERT_LASTNAMELabel.Text = "Lastname";
-            // 
-            // eXPERT_SURNAMELabel
-            // 
-            eXPERT_SURNAMELabel.AutoSize = true;
-            eXPERT_SURNAMELabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            eXPERT_SURNAMELabel.Location = new System.Drawing.Point(419, 43);
-            eXPERT_SURNAMELabel.Name = "eXPERT_SURNAMELabel";
-            eXPERT_SURNAMELabel.Size = new System.Drawing.Size(64, 13);
-            eXPERT_SURNAMELabel.TabIndex = 6;
-            eXPERT_SURNAMELabel.Text = "Middlename";
-            // 
-            // eXPERT_NAMELabel
-            // 
-            eXPERT_NAMELabel.AutoSize = true;
-            eXPERT_NAMELabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            eXPERT_NAMELabel.Location = new System.Drawing.Point(259, 43);
-            eXPERT_NAMELabel.Name = "eXPERT_NAMELabel";
-            eXPERT_NAMELabel.Size = new System.Drawing.Size(52, 13);
-            eXPERT_NAMELabel.TabIndex = 4;
-            eXPERT_NAMELabel.Text = "Firstname";
-            // 
             // eXPERT_TYPELabel
             // 
             eXPERT_TYPELabel.AutoSize = true;
             eXPERT_TYPELabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            eXPERT_TYPELabel.Location = new System.Drawing.Point(261, 110);
+            eXPERT_TYPELabel.Location = new System.Drawing.Point(106, 260);
             eXPERT_TYPELabel.Name = "eXPERT_TYPELabel";
             eXPERT_TYPELabel.Size = new System.Drawing.Size(31, 13);
             eXPERT_TYPELabel.TabIndex = 2;
@@ -101,7 +68,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            label1.Location = new System.Drawing.Point(259, 181);
+            label1.Location = new System.Drawing.Point(217, 260);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(91, 13);
             label1.TabIndex = 10;
@@ -144,93 +111,127 @@
             // 
             this.expertsTableAdapter1.ClearBeforeFill = true;
             // 
-            // eXPERT_LASTNAMETextBox
+            // typet
             // 
-            this.eXPERT_LASTNAMETextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.eXPERT_LASTNAMETextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eXPERT_LASTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eXPERTSBindingSource, "EXPERT_LASTNAME", true));
-            this.eXPERT_LASTNAMETextBox.ForeColor = System.Drawing.Color.White;
-            this.eXPERT_LASTNAMETextBox.Location = new System.Drawing.Point(584, 63);
-            this.eXPERT_LASTNAMETextBox.Multiline = true;
-            this.eXPERT_LASTNAMETextBox.Name = "eXPERT_LASTNAMETextBox";
-            this.eXPERT_LASTNAMETextBox.Size = new System.Drawing.Size(130, 20);
-            this.eXPERT_LASTNAMETextBox.TabIndex = 9;
+            this.typet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.typet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eXPERTSBindingSource, "EXPERT_TYPE", true));
+            this.typet.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.typet.ForeColor = System.Drawing.Color.White;
+            this.typet.Location = new System.Drawing.Point(109, 280);
+            this.typet.Multiline = true;
+            this.typet.Name = "typet";
+            this.typet.Size = new System.Drawing.Size(88, 24);
+            this.typet.TabIndex = 3;
             // 
-            // eXPERT_SURNAMETextBox
+            // assignedProjectst
             // 
-            this.eXPERT_SURNAMETextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.eXPERT_SURNAMETextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eXPERT_SURNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eXPERTSBindingSource, "EXPERT_SURNAME", true));
-            this.eXPERT_SURNAMETextBox.ForeColor = System.Drawing.Color.White;
-            this.eXPERT_SURNAMETextBox.Location = new System.Drawing.Point(422, 63);
-            this.eXPERT_SURNAMETextBox.Multiline = true;
-            this.eXPERT_SURNAMETextBox.Name = "eXPERT_SURNAMETextBox";
-            this.eXPERT_SURNAMETextBox.Size = new System.Drawing.Size(130, 20);
-            this.eXPERT_SURNAMETextBox.TabIndex = 7;
+            this.assignedProjectst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.assignedProjectst.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eXPERTSBindingSource, "EXPERT_TYPE", true));
+            this.assignedProjectst.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.assignedProjectst.ForeColor = System.Drawing.Color.White;
+            this.assignedProjectst.Location = new System.Drawing.Point(220, 281);
+            this.assignedProjectst.Multiline = true;
+            this.assignedProjectst.Name = "assignedProjectst";
+            this.assignedProjectst.Size = new System.Drawing.Size(88, 24);
+            this.assignedProjectst.TabIndex = 11;
             // 
-            // eXPERT_NAMETextBox
+            // firstnamet
             // 
-            this.eXPERT_NAMETextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.eXPERT_NAMETextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eXPERT_NAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eXPERTSBindingSource, "EXPERT_NAME", true));
-            this.eXPERT_NAMETextBox.ForeColor = System.Drawing.Color.White;
-            this.eXPERT_NAMETextBox.Location = new System.Drawing.Point(262, 63);
-            this.eXPERT_NAMETextBox.Multiline = true;
-            this.eXPERT_NAMETextBox.Name = "eXPERT_NAMETextBox";
-            this.eXPERT_NAMETextBox.Size = new System.Drawing.Size(130, 20);
-            this.eXPERT_NAMETextBox.TabIndex = 5;
+            this.firstnamet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.firstnamet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.firstnamet.ForeColor = System.Drawing.Color.White;
+            this.firstnamet.Location = new System.Drawing.Point(109, 102);
+            this.firstnamet.Multiline = true;
+            this.firstnamet.Name = "firstnamet";
+            this.firstnamet.Size = new System.Drawing.Size(199, 24);
+            this.firstnamet.TabIndex = 12;
             // 
-            // eXPERT_TYPETextBox
+            // firstnamel
             // 
-            this.eXPERT_TYPETextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.eXPERT_TYPETextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eXPERT_TYPETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eXPERTSBindingSource, "EXPERT_TYPE", true));
-            this.eXPERT_TYPETextBox.ForeColor = System.Drawing.Color.White;
-            this.eXPERT_TYPETextBox.Location = new System.Drawing.Point(264, 130);
-            this.eXPERT_TYPETextBox.Multiline = true;
-            this.eXPERT_TYPETextBox.Name = "eXPERT_TYPETextBox";
-            this.eXPERT_TYPETextBox.Size = new System.Drawing.Size(130, 20);
-            this.eXPERT_TYPETextBox.TabIndex = 3;
+            this.firstnamel.AutoSize = true;
+            this.firstnamel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.firstnamel.ForeColor = System.Drawing.Color.White;
+            this.firstnamel.Location = new System.Drawing.Point(106, 78);
+            this.firstnamel.Name = "firstnamel";
+            this.firstnamel.Size = new System.Drawing.Size(64, 17);
+            this.firstnamel.TabIndex = 13;
+            this.firstnamel.Text = "Firstname";
             // 
-            // textBox1
+            // lastnamet
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eXPERTSBindingSource, "EXPERT_TYPE", true));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(262, 202);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 11;
+            this.lastnamet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.lastnamet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lastnamet.ForeColor = System.Drawing.Color.White;
+            this.lastnamet.Location = new System.Drawing.Point(109, 223);
+            this.lastnamet.Multiline = true;
+            this.lastnamet.Name = "lastnamet";
+            this.lastnamet.Size = new System.Drawing.Size(199, 24);
+            this.lastnamet.TabIndex = 16;
             // 
-            // panel1
+            // surnamet
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.panel1.Location = new System.Drawing.Point(-54, -7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 309);
-            this.panel1.TabIndex = 12;
+            this.surnamet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.surnamet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnamet.ForeColor = System.Drawing.Color.White;
+            this.surnamet.Location = new System.Drawing.Point(109, 163);
+            this.surnamet.Multiline = true;
+            this.surnamet.Name = "surnamet";
+            this.surnamet.Size = new System.Drawing.Size(199, 24);
+            this.surnamet.TabIndex = 14;
+            // 
+            // surnamel
+            // 
+            this.surnamel.AutoSize = true;
+            this.surnamel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnamel.ForeColor = System.Drawing.Color.White;
+            this.surnamel.Location = new System.Drawing.Point(106, 139);
+            this.surnamel.Name = "surnamel";
+            this.surnamel.Size = new System.Drawing.Size(59, 17);
+            this.surnamel.TabIndex = 15;
+            this.surnamel.Text = "Surname";
+            // 
+            // lastnamel
+            // 
+            this.lastnamel.AutoSize = true;
+            this.lastnamel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lastnamel.ForeColor = System.Drawing.Color.White;
+            this.lastnamel.Location = new System.Drawing.Point(106, 200);
+            this.lastnamel.Name = "lastnamel";
+            this.lastnamel.Size = new System.Drawing.Size(63, 17);
+            this.lastnamel.TabIndex = 17;
+            this.lastnamel.Text = "Lastname";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(132, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 32);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "User Details";
             // 
             // User_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(812, 272);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(405, 342);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.firstnamet);
+            this.Controls.Add(this.firstnamel);
+            this.Controls.Add(this.lastnamet);
+            this.Controls.Add(this.surnamet);
+            this.Controls.Add(this.surnamel);
+            this.Controls.Add(this.lastnamel);
             this.Controls.Add(label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.assignedProjectst);
             this.Controls.Add(eXPERT_TYPELabel);
-            this.Controls.Add(this.eXPERT_TYPETextBox);
-            this.Controls.Add(eXPERT_NAMELabel);
-            this.Controls.Add(this.eXPERT_NAMETextBox);
-            this.Controls.Add(eXPERT_LASTNAMELabel);
-            this.Controls.Add(this.eXPERT_SURNAMETextBox);
-            this.Controls.Add(eXPERT_SURNAMELabel);
-            this.Controls.Add(this.eXPERT_LASTNAMETextBox);
+            this.Controls.Add(this.typet);
             this.Name = "User_Details";
-            this.Text = "User_Details";
+            this.Text = "User Details";
             this.Load += new System.EventHandler(this.User_Details_Load);
             ((System.ComponentModel.ISupportInitialize)(this.eXPERTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).EndInit();
@@ -248,11 +249,14 @@
         private ProjectManagementDBDataSetTableAdapters.PROJECTSTableAdapter pROJECTSTableAdapter;
         private System.Windows.Forms.BindingSource pROJECTSBindingSource;
         private ProjectManagementDBDataSetTableAdapters.EXPERTSTableAdapter expertsTableAdapter1;
-        private System.Windows.Forms.TextBox eXPERT_LASTNAMETextBox;
-        private System.Windows.Forms.TextBox eXPERT_SURNAMETextBox;
-        private System.Windows.Forms.TextBox eXPERT_NAMETextBox;
-        private System.Windows.Forms.TextBox eXPERT_TYPETextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox typet;
+        private System.Windows.Forms.TextBox assignedProjectst;
+        private System.Windows.Forms.TextBox firstnamet;
+        private System.Windows.Forms.Label firstnamel;
+        private System.Windows.Forms.TextBox lastnamet;
+        private System.Windows.Forms.TextBox surnamet;
+        private System.Windows.Forms.Label surnamel;
+        private System.Windows.Forms.Label lastnamel;
+        private System.Windows.Forms.Label label3;
     }
 }

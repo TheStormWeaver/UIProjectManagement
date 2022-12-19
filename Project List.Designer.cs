@@ -44,6 +44,18 @@
             this.eXPERTSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.eXPERTSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.projectListGrid = new System.Windows.Forms.DataGridView();
+            this.pROJECTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTCLIENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTBEGINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTENDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editProjectStatus = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.projectStatusSearchcb = new System.Windows.Forms.ComboBox();
             this.projectUserSearchcb = new System.Windows.Forms.ComboBox();
@@ -60,18 +72,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pROJECTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTDESCRIPTIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTCLIENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTBEGINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTENDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJECTPAYPERHOURDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editProjectStatus = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource1)).BeginInit();
@@ -99,7 +99,7 @@
             this.searchProjectbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchProjectbtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchProjectbtn.ForeColor = System.Drawing.Color.Transparent;
-            this.searchProjectbtn.Location = new System.Drawing.Point(43, 274);
+            this.searchProjectbtn.Location = new System.Drawing.Point(79, 313);
             this.searchProjectbtn.Name = "searchProjectbtn";
             this.searchProjectbtn.Size = new System.Drawing.Size(103, 25);
             this.searchProjectbtn.TabIndex = 8;
@@ -177,7 +177,7 @@
             this.projectListGrid.DataSource = this.pROJECTSBindingSource1;
             this.projectListGrid.EnableHeadersVisualStyles = false;
             this.projectListGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.projectListGrid.Location = new System.Drawing.Point(387, 79);
+            this.projectListGrid.Location = new System.Drawing.Point(286, 86);
             this.projectListGrid.Name = "projectListGrid";
             this.projectListGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -190,201 +190,16 @@
             this.projectListGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.projectListGrid.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.projectListGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.projectListGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.projectListGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.projectListGrid.Size = new System.Drawing.Size(1098, 390);
+            this.projectListGrid.Size = new System.Drawing.Size(1098, 303);
             this.projectListGrid.TabIndex = 0;
             this.projectListGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectListGrid_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(382, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 30);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "List of Projects";
-            // 
-            // projectStatusSearchcb
-            // 
-            this.projectStatusSearchcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.projectStatusSearchcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.projectStatusSearchcb.ForeColor = System.Drawing.Color.White;
-            this.projectStatusSearchcb.FormattingEnabled = true;
-            this.projectStatusSearchcb.Location = new System.Drawing.Point(42, 161);
-            this.projectStatusSearchcb.Name = "projectStatusSearchcb";
-            this.projectStatusSearchcb.Size = new System.Drawing.Size(103, 21);
-            this.projectStatusSearchcb.TabIndex = 18;
-            // 
-            // projectUserSearchcb
-            // 
-            this.projectUserSearchcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.projectUserSearchcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.projectUserSearchcb.ForeColor = System.Drawing.Color.White;
-            this.projectUserSearchcb.FormattingEnabled = true;
-            this.projectUserSearchcb.Location = new System.Drawing.Point(195, 161);
-            this.projectUserSearchcb.Name = "projectUserSearchcb";
-            this.projectUserSearchcb.Size = new System.Drawing.Size(96, 21);
-            this.projectUserSearchcb.TabIndex = 17;
-            // 
-            // projectNameSearchl
-            // 
-            this.projectNameSearchl.AutoSize = true;
-            this.projectNameSearchl.ForeColor = System.Drawing.Color.White;
-            this.projectNameSearchl.Location = new System.Drawing.Point(192, 77);
-            this.projectNameSearchl.Name = "projectNameSearchl";
-            this.projectNameSearchl.Size = new System.Drawing.Size(35, 13);
-            this.projectNameSearchl.TabIndex = 7;
-            this.projectNameSearchl.Text = "Name";
-            // 
-            // projectStatusSearchl
-            // 
-            this.projectStatusSearchl.AutoSize = true;
-            this.projectStatusSearchl.ForeColor = System.Drawing.Color.White;
-            this.projectStatusSearchl.Location = new System.Drawing.Point(40, 141);
-            this.projectStatusSearchl.Name = "projectStatusSearchl";
-            this.projectStatusSearchl.Size = new System.Drawing.Size(37, 13);
-            this.projectStatusSearchl.TabIndex = 14;
-            this.projectStatusSearchl.Text = "Status";
-            // 
-            // projectEndDatel
-            // 
-            this.projectEndDatel.AutoSize = true;
-            this.projectEndDatel.ForeColor = System.Drawing.Color.White;
-            this.projectEndDatel.Location = new System.Drawing.Point(192, 201);
-            this.projectEndDatel.Name = "projectEndDatel";
-            this.projectEndDatel.Size = new System.Drawing.Size(52, 13);
-            this.projectEndDatel.TabIndex = 16;
-            this.projectEndDatel.Text = "End Date";
-            // 
-            // projectNameSearcht
-            // 
-            this.projectNameSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.projectNameSearcht.ForeColor = System.Drawing.Color.White;
-            this.projectNameSearcht.Location = new System.Drawing.Point(195, 99);
-            this.projectNameSearcht.Multiline = true;
-            this.projectNameSearcht.Name = "projectNameSearcht";
-            this.projectNameSearcht.Size = new System.Drawing.Size(96, 23);
-            this.projectNameSearcht.TabIndex = 6;
-            // 
-            // projectStartDateSearchl
-            // 
-            this.projectStartDateSearchl.AutoSize = true;
-            this.projectStartDateSearchl.ForeColor = System.Drawing.Color.White;
-            this.projectStartDateSearchl.Location = new System.Drawing.Point(39, 202);
-            this.projectStartDateSearchl.Name = "projectStartDateSearchl";
-            this.projectStartDateSearchl.Size = new System.Drawing.Size(58, 13);
-            this.projectStartDateSearchl.TabIndex = 12;
-            this.projectStartDateSearchl.Text = "Starrt Date";
-            // 
-            // projectEndDateSearcht
-            // 
-            this.projectEndDateSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.projectEndDateSearcht.ForeColor = System.Drawing.Color.White;
-            this.projectEndDateSearcht.Location = new System.Drawing.Point(195, 223);
-            this.projectEndDateSearcht.Multiline = true;
-            this.projectEndDateSearcht.Name = "projectEndDateSearcht";
-            this.projectEndDateSearcht.Size = new System.Drawing.Size(96, 23);
-            this.projectEndDateSearcht.TabIndex = 15;
-            // 
-            // projectStartDateSearcht
-            // 
-            this.projectStartDateSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.projectStartDateSearcht.ForeColor = System.Drawing.Color.White;
-            this.projectStartDateSearcht.Location = new System.Drawing.Point(42, 223);
-            this.projectStartDateSearcht.Multiline = true;
-            this.projectStartDateSearcht.Name = "projectStartDateSearcht";
-            this.projectStartDateSearcht.Size = new System.Drawing.Size(103, 23);
-            this.projectStartDateSearcht.TabIndex = 11;
-            // 
-            // projectUserSearchl
-            // 
-            this.projectUserSearchl.AutoSize = true;
-            this.projectUserSearchl.ForeColor = System.Drawing.Color.White;
-            this.projectUserSearchl.Location = new System.Drawing.Point(192, 141);
-            this.projectUserSearchl.Name = "projectUserSearchl";
-            this.projectUserSearchl.Size = new System.Drawing.Size(83, 13);
-            this.projectUserSearchl.TabIndex = 10;
-            this.projectUserSearchl.Text = "Assinged Expert";
-            // 
-            // projectIDSearchl
-            // 
-            this.projectIDSearchl.AutoSize = true;
-            this.projectIDSearchl.ForeColor = System.Drawing.Color.White;
-            this.projectIDSearchl.Location = new System.Drawing.Point(39, 77);
-            this.projectIDSearchl.Name = "projectIDSearchl";
-            this.projectIDSearchl.Size = new System.Drawing.Size(68, 13);
-            this.projectIDSearchl.TabIndex = 5;
-            this.projectIDSearchl.Text = "Project Code";
-            // 
-            // projectIDSearcht
-            // 
-            this.projectIDSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.projectIDSearcht.ForeColor = System.Drawing.Color.White;
-            this.projectIDSearcht.Location = new System.Drawing.Point(42, 99);
-            this.projectIDSearcht.Multiline = true;
-            this.projectIDSearcht.Name = "projectIDSearcht";
-            this.projectIDSearcht.Size = new System.Drawing.Size(103, 23);
-            this.projectIDSearcht.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.searchProjectbtn);
-            this.panel1.Controls.Add(this.projectStatusSearchcb);
-            this.panel1.Controls.Add(this.projectUserSearchcb);
-            this.panel1.Controls.Add(this.projectEndDateSearcht);
-            this.panel1.Controls.Add(this.projectNameSearchl);
-            this.panel1.Controls.Add(this.projectIDSearcht);
-            this.panel1.Controls.Add(this.projectStatusSearchl);
-            this.panel1.Controls.Add(this.projectIDSearchl);
-            this.panel1.Controls.Add(this.projectEndDatel);
-            this.panel1.Controls.Add(this.projectUserSearchl);
-            this.panel1.Controls.Add(this.projectNameSearcht);
-            this.panel1.Controls.Add(this.projectStartDateSearcht);
-            this.panel1.Controls.Add(this.projectStartDateSearchl);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 505);
-            this.panel1.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(38, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 30);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Search Projects";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1338, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 28);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Add New Project";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pROJECTIDDataGridViewTextBoxColumn
             // 
@@ -475,18 +290,203 @@
             this.Delete.ToolTipText = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(281, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 30);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "List of Projects";
+            // 
+            // projectStatusSearchcb
+            // 
+            this.projectStatusSearchcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectStatusSearchcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectStatusSearchcb.ForeColor = System.Drawing.Color.White;
+            this.projectStatusSearchcb.FormattingEnabled = true;
+            this.projectStatusSearchcb.Location = new System.Drawing.Point(28, 204);
+            this.projectStatusSearchcb.Name = "projectStatusSearchcb";
+            this.projectStatusSearchcb.Size = new System.Drawing.Size(89, 21);
+            this.projectStatusSearchcb.TabIndex = 18;
+            // 
+            // projectUserSearchcb
+            // 
+            this.projectUserSearchcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectUserSearchcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectUserSearchcb.ForeColor = System.Drawing.Color.White;
+            this.projectUserSearchcb.FormattingEnabled = true;
+            this.projectUserSearchcb.Location = new System.Drawing.Point(138, 204);
+            this.projectUserSearchcb.Name = "projectUserSearchcb";
+            this.projectUserSearchcb.Size = new System.Drawing.Size(90, 21);
+            this.projectUserSearchcb.TabIndex = 17;
+            // 
+            // projectNameSearchl
+            // 
+            this.projectNameSearchl.AutoSize = true;
+            this.projectNameSearchl.ForeColor = System.Drawing.Color.White;
+            this.projectNameSearchl.Location = new System.Drawing.Point(26, 134);
+            this.projectNameSearchl.Name = "projectNameSearchl";
+            this.projectNameSearchl.Size = new System.Drawing.Size(35, 13);
+            this.projectNameSearchl.TabIndex = 7;
+            this.projectNameSearchl.Text = "Name";
+            // 
+            // projectStatusSearchl
+            // 
+            this.projectStatusSearchl.AutoSize = true;
+            this.projectStatusSearchl.ForeColor = System.Drawing.Color.White;
+            this.projectStatusSearchl.Location = new System.Drawing.Point(26, 184);
+            this.projectStatusSearchl.Name = "projectStatusSearchl";
+            this.projectStatusSearchl.Size = new System.Drawing.Size(37, 13);
+            this.projectStatusSearchl.TabIndex = 14;
+            this.projectStatusSearchl.Text = "Status";
+            // 
+            // projectEndDatel
+            // 
+            this.projectEndDatel.AutoSize = true;
+            this.projectEndDatel.ForeColor = System.Drawing.Color.White;
+            this.projectEndDatel.Location = new System.Drawing.Point(135, 241);
+            this.projectEndDatel.Name = "projectEndDatel";
+            this.projectEndDatel.Size = new System.Drawing.Size(52, 13);
+            this.projectEndDatel.TabIndex = 16;
+            this.projectEndDatel.Text = "End Date";
+            // 
+            // projectNameSearcht
+            // 
+            this.projectNameSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectNameSearcht.ForeColor = System.Drawing.Color.White;
+            this.projectNameSearcht.Location = new System.Drawing.Point(27, 151);
+            this.projectNameSearcht.Multiline = true;
+            this.projectNameSearcht.Name = "projectNameSearcht";
+            this.projectNameSearcht.Size = new System.Drawing.Size(201, 23);
+            this.projectNameSearcht.TabIndex = 6;
+            // 
+            // projectStartDateSearchl
+            // 
+            this.projectStartDateSearchl.AutoSize = true;
+            this.projectStartDateSearchl.ForeColor = System.Drawing.Color.White;
+            this.projectStartDateSearchl.Location = new System.Drawing.Point(26, 241);
+            this.projectStartDateSearchl.Name = "projectStartDateSearchl";
+            this.projectStartDateSearchl.Size = new System.Drawing.Size(58, 13);
+            this.projectStartDateSearchl.TabIndex = 12;
+            this.projectStartDateSearchl.Text = "Starrt Date";
+            // 
+            // projectEndDateSearcht
+            // 
+            this.projectEndDateSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectEndDateSearcht.ForeColor = System.Drawing.Color.White;
+            this.projectEndDateSearcht.Location = new System.Drawing.Point(138, 260);
+            this.projectEndDateSearcht.Multiline = true;
+            this.projectEndDateSearcht.Name = "projectEndDateSearcht";
+            this.projectEndDateSearcht.Size = new System.Drawing.Size(90, 23);
+            this.projectEndDateSearcht.TabIndex = 15;
+            // 
+            // projectStartDateSearcht
+            // 
+            this.projectStartDateSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectStartDateSearcht.ForeColor = System.Drawing.Color.White;
+            this.projectStartDateSearcht.Location = new System.Drawing.Point(27, 260);
+            this.projectStartDateSearcht.Multiline = true;
+            this.projectStartDateSearcht.Name = "projectStartDateSearcht";
+            this.projectStartDateSearcht.Size = new System.Drawing.Size(90, 23);
+            this.projectStartDateSearcht.TabIndex = 11;
+            // 
+            // projectUserSearchl
+            // 
+            this.projectUserSearchl.AutoSize = true;
+            this.projectUserSearchl.ForeColor = System.Drawing.Color.White;
+            this.projectUserSearchl.Location = new System.Drawing.Point(135, 184);
+            this.projectUserSearchl.Name = "projectUserSearchl";
+            this.projectUserSearchl.Size = new System.Drawing.Size(33, 13);
+            this.projectUserSearchl.TabIndex = 10;
+            this.projectUserSearchl.Text = "Client";
+            // 
+            // projectIDSearchl
+            // 
+            this.projectIDSearchl.AutoSize = true;
+            this.projectIDSearchl.ForeColor = System.Drawing.Color.White;
+            this.projectIDSearchl.Location = new System.Drawing.Point(24, 79);
+            this.projectIDSearchl.Name = "projectIDSearchl";
+            this.projectIDSearchl.Size = new System.Drawing.Size(68, 13);
+            this.projectIDSearchl.TabIndex = 5;
+            this.projectIDSearchl.Text = "Project Code";
+            // 
+            // projectIDSearcht
+            // 
+            this.projectIDSearcht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectIDSearcht.ForeColor = System.Drawing.Color.White;
+            this.projectIDSearcht.Location = new System.Drawing.Point(27, 101);
+            this.projectIDSearcht.Multiline = true;
+            this.projectIDSearcht.Name = "projectIDSearcht";
+            this.projectIDSearcht.Size = new System.Drawing.Size(201, 23);
+            this.projectIDSearcht.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.searchProjectbtn);
+            this.panel1.Controls.Add(this.projectStatusSearchcb);
+            this.panel1.Controls.Add(this.projectUserSearchcb);
+            this.panel1.Controls.Add(this.projectEndDateSearcht);
+            this.panel1.Controls.Add(this.projectNameSearchl);
+            this.panel1.Controls.Add(this.projectIDSearcht);
+            this.panel1.Controls.Add(this.projectStatusSearchl);
+            this.panel1.Controls.Add(this.projectIDSearchl);
+            this.panel1.Controls.Add(this.projectEndDatel);
+            this.panel1.Controls.Add(this.projectUserSearchl);
+            this.panel1.Controls.Add(this.projectNameSearcht);
+            this.panel1.Controls.Add(this.projectStartDateSearcht);
+            this.panel1.Controls.Add(this.projectStartDateSearchl);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(259, 413);
+            this.panel1.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(42, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(162, 30);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Search Projects";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1237, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 28);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Add New Project";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Project_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1534, 505);
+            this.ClientSize = new System.Drawing.Size(1412, 413);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.projectListGrid);
             this.Controls.Add(this.panel1);
             this.Name = "Project_List";
-            this.Text = "Project_List";
+            this.Text = "Project List";
             this.Load += new System.EventHandler(this.Project_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pROJECTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).EndInit();

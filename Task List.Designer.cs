@@ -34,12 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.taskListGrid = new System.Windows.Forms.DataGridView();
-            this.pROJECT_TASKSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectManagementDBDataSet = new ProjectManagement.ProjectManagementDBDataSet();
-            this.pROJECT_TASKSTableAdapter = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.PROJECT_TASKSTableAdapter();
-            this.tableAdapterManager = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.TableAdapterManager();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tASKIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROJECTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eXPRETIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +49,12 @@
             this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pROJECT_TASKSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectManagementDBDataSet = new ProjectManagement.ProjectManagementDBDataSet();
+            this.pROJECT_TASKSTableAdapter = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.PROJECT_TASKSTableAdapter();
+            this.tableAdapterManager = new ProjectManagement.ProjectManagementDBDataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.taskListGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectManagementDBDataSet)).BeginInit();
@@ -103,7 +103,7 @@
             this.taskListGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.taskListGrid.EnableHeadersVisualStyles = false;
             this.taskListGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.taskListGrid.Location = new System.Drawing.Point(37, 82);
+            this.taskListGrid.Location = new System.Drawing.Point(33, 79);
             this.taskListGrid.Name = "taskListGrid";
             this.taskListGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -122,57 +122,6 @@
             this.taskListGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.taskListGrid.Size = new System.Drawing.Size(1201, 317);
             this.taskListGrid.TabIndex = 0;
-            // 
-            // pROJECT_TASKSBindingSource
-            // 
-            this.pROJECT_TASKSBindingSource.DataMember = "PROJECT_TASKS";
-            this.pROJECT_TASKSBindingSource.DataSource = this.projectManagementDBDataSet;
-            // 
-            // projectManagementDBDataSet
-            // 
-            this.projectManagementDBDataSet.DataSetName = "ProjectManagementDBDataSet";
-            this.projectManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pROJECT_TASKSTableAdapter
-            // 
-            this.pROJECT_TASKSTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EXPERTSTableAdapter = null;
-            this.tableAdapterManager.PROJECT_STATUSTableAdapter = null;
-            this.tableAdapterManager.PROJECT_TASKSTableAdapter = this.pROJECT_TASKSTableAdapter;
-            this.tableAdapterManager.PROJECTSTableAdapter = null;
-            this.tableAdapterManager.TASK_STATUSTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ProjectManagement.ProjectManagementDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(1135, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Create Task";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(32, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 30);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "List of Tasks";
             // 
             // tASKIDDataGridViewTextBoxColumn
             // 
@@ -285,17 +234,68 @@
             this.Delete.ToolTipText = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // pROJECT_TASKSBindingSource
+            // 
+            this.pROJECT_TASKSBindingSource.DataMember = "PROJECT_TASKS";
+            this.pROJECT_TASKSBindingSource.DataSource = this.projectManagementDBDataSet;
+            // 
+            // projectManagementDBDataSet
+            // 
+            this.projectManagementDBDataSet.DataSetName = "ProjectManagementDBDataSet";
+            this.projectManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pROJECT_TASKSTableAdapter
+            // 
+            this.pROJECT_TASKSTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EXPERTSTableAdapter = null;
+            this.tableAdapterManager.PROJECT_STATUSTableAdapter = null;
+            this.tableAdapterManager.PROJECT_TASKSTableAdapter = this.pROJECT_TASKSTableAdapter;
+            this.tableAdapterManager.PROJECTSTableAdapter = null;
+            this.tableAdapterManager.TASK_STATUSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ProjectManagement.ProjectManagementDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(1131, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Create Task";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(28, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 30);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "List of Tasks";
+            // 
             // Task_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1286, 441);
+            this.ClientSize = new System.Drawing.Size(1260, 421);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.taskListGrid);
             this.Name = "Task_List";
-            this.Text = "Task_List";
+            this.Text = "Task List";
             this.Load += new System.EventHandler(this.Task_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.taskListGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROJECT_TASKSBindingSource)).EndInit();
