@@ -42,11 +42,11 @@ namespace ProjectManagement
             this.taskHoursl = new System.Windows.Forms.Label();
             this.taskResultl = new System.Windows.Forms.Label();
             this.taskProgressl = new System.Windows.Forms.Label();
-            this.taskResultcb = new System.Windows.Forms.ComboBox();
             this.taskDescrt = new System.Windows.Forms.RichTextBox();
             this.taskPrioritycb = new System.Windows.Forms.ComboBox();
             this.taskHourst = new System.Windows.Forms.MaskedTextBox();
             this.taskPriorityl = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // taskExpertcb
@@ -100,12 +100,13 @@ namespace ProjectManagement
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(152, 484);
+            this.button1.Location = new System.Drawing.Point(152, 424);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 29);
             this.button1.TabIndex = 47;
             this.button1.Text = "Save Changes";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // taskNamel
             // 
@@ -155,11 +156,11 @@ namespace ProjectManagement
             // 
             this.taskProgresst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskProgresst.ForeColor = System.Drawing.SystemColors.Window;
-            this.taskProgresst.Location = new System.Drawing.Point(77, 441);
+            this.taskProgresst.Location = new System.Drawing.Point(225, 320);
             this.taskProgresst.MaximumSize = new System.Drawing.Size(150, 21);
             this.taskProgresst.MinimumSize = new System.Drawing.Size(112, 21);
             this.taskProgresst.Name = "taskProgresst";
-            this.taskProgresst.Size = new System.Drawing.Size(112, 20);
+            this.taskProgresst.Size = new System.Drawing.Size(112, 21);
             this.taskProgresst.TabIndex = 42;
             // 
             // taskHoursl
@@ -181,31 +182,20 @@ namespace ProjectManagement
             this.taskResultl.ForeColor = System.Drawing.Color.White;
             this.taskResultl.Location = new System.Drawing.Point(74, 299);
             this.taskResultl.Name = "taskResultl";
-            this.taskResultl.Size = new System.Drawing.Size(145, 17);
+            this.taskResultl.Size = new System.Drawing.Size(88, 17);
             this.taskResultl.TabIndex = 33;
-            this.taskResultl.Text = "Expected Result Format";
+            this.taskResultl.Text = "Result Format";
             // 
             // taskProgressl
             // 
             this.taskProgressl.AutoSize = true;
             this.taskProgressl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taskProgressl.ForeColor = System.Drawing.Color.White;
-            this.taskProgressl.Location = new System.Drawing.Point(74, 419);
+            this.taskProgressl.Location = new System.Drawing.Point(222, 299);
             this.taskProgressl.Name = "taskProgressl";
             this.taskProgressl.Size = new System.Drawing.Size(89, 17);
             this.taskProgressl.TabIndex = 41;
             this.taskProgressl.Text = "Task Progress";
-            // 
-            // taskResultcb
-            // 
-            this.taskResultcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.taskResultcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskResultcb.ForeColor = System.Drawing.SystemColors.Window;
-            this.taskResultcb.FormattingEnabled = true;
-            this.taskResultcb.Location = new System.Drawing.Point(77, 324);
-            this.taskResultcb.Name = "taskResultcb";
-            this.taskResultcb.Size = new System.Drawing.Size(260, 21);
-            this.taskResultcb.TabIndex = 34;
             // 
             // taskDescrt
             // 
@@ -233,11 +223,11 @@ namespace ProjectManagement
             // 
             this.taskHourst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskHourst.ForeColor = System.Drawing.SystemColors.Window;
-            this.taskHourst.Location = new System.Drawing.Point(225, 381);
+            this.taskHourst.Location = new System.Drawing.Point(225, 383);
             this.taskHourst.MaximumSize = new System.Drawing.Size(152, 21);
             this.taskHourst.MinimumSize = new System.Drawing.Size(112, 21);
             this.taskHourst.Name = "taskHourst";
-            this.taskHourst.Size = new System.Drawing.Size(112, 20);
+            this.taskHourst.Size = new System.Drawing.Size(112, 21);
             this.taskHourst.TabIndex = 44;
             // 
             // taskPriorityl
@@ -251,12 +241,24 @@ namespace ProjectManagement
             this.taskPriorityl.TabIndex = 37;
             this.taskPriorityl.Text = "Priority";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.maskedTextBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.maskedTextBox1.Location = new System.Drawing.Point(77, 319);
+            this.maskedTextBox1.MaximumSize = new System.Drawing.Size(152, 21);
+            this.maskedTextBox1.MinimumSize = new System.Drawing.Size(112, 21);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(112, 21);
+            this.maskedTextBox1.TabIndex = 51;
+            // 
             // TaskEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(411, 536);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.taskExpertcb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -270,13 +272,13 @@ namespace ProjectManagement
             this.Controls.Add(this.taskHoursl);
             this.Controls.Add(this.taskResultl);
             this.Controls.Add(this.taskProgressl);
-            this.Controls.Add(this.taskResultcb);
             this.Controls.Add(this.taskDescrt);
             this.Controls.Add(this.taskPrioritycb);
             this.Controls.Add(this.taskHourst);
             this.Controls.Add(this.taskPriorityl);
             this.Name = "TaskEdit";
             this.Text = "Edit Task";
+            this.Load += new System.EventHandler(this.TaskEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,10 +299,10 @@ namespace ProjectManagement
         private System.Windows.Forms.Label taskHoursl;
         private System.Windows.Forms.Label taskResultl;
         private System.Windows.Forms.Label taskProgressl;
-        private System.Windows.Forms.ComboBox taskResultcb;
         private System.Windows.Forms.RichTextBox taskDescrt;
         private System.Windows.Forms.ComboBox taskPrioritycb;
         private System.Windows.Forms.MaskedTextBox taskHourst;
         private System.Windows.Forms.Label taskPriorityl;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

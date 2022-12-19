@@ -33,9 +33,7 @@
             this.taskDescl = new System.Windows.Forms.Label();
             this.taskDescrt = new System.Windows.Forms.RichTextBox();
             this.taskResultl = new System.Windows.Forms.Label();
-            this.taskResultcb = new System.Windows.Forms.ComboBox();
             this.taskTimel = new System.Windows.Forms.Label();
-            this.taskTimedt = new System.Windows.Forms.DateTimePicker();
             this.taskPrioritycb = new System.Windows.Forms.ComboBox();
             this.taskPriorityl = new System.Windows.Forms.Label();
             this.taskStatuscb = new System.Windows.Forms.ComboBox();
@@ -45,11 +43,15 @@
             this.taskHourst = new System.Windows.Forms.MaskedTextBox();
             this.taskHoursl = new System.Windows.Forms.Label();
             this.taskCommentrt = new System.Windows.Forms.RichTextBox();
-            this.taskCommentl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.taskExpertcb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.projectNames = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtStartDate = new System.Windows.Forms.DateTimePicker();
+            this.txtEndDate = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // taskNamet
@@ -108,34 +110,16 @@
             this.taskResultl.TabIndex = 6;
             this.taskResultl.Text = "Expected Result Format";
             // 
-            // taskResultcb
-            // 
-            this.taskResultcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.taskResultcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskResultcb.ForeColor = System.Drawing.SystemColors.Window;
-            this.taskResultcb.FormattingEnabled = true;
-            this.taskResultcb.Location = new System.Drawing.Point(85, 325);
-            this.taskResultcb.Name = "taskResultcb";
-            this.taskResultcb.Size = new System.Drawing.Size(260, 21);
-            this.taskResultcb.TabIndex = 7;
-            // 
             // taskTimel
             // 
             this.taskTimel.AutoSize = true;
             this.taskTimel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taskTimel.ForeColor = System.Drawing.Color.White;
-            this.taskTimel.Location = new System.Drawing.Point(230, 420);
+            this.taskTimel.Location = new System.Drawing.Point(231, 420);
             this.taskTimel.Name = "taskTimel";
-            this.taskTimel.Size = new System.Drawing.Size(88, 17);
+            this.taskTimel.Size = new System.Drawing.Size(48, 17);
             this.taskTimel.TabIndex = 8;
-            this.taskTimel.Text = "Creation Date";
-            // 
-            // taskTimedt
-            // 
-            this.taskTimedt.Location = new System.Drawing.Point(233, 441);
-            this.taskTimedt.Name = "taskTimedt";
-            this.taskTimedt.Size = new System.Drawing.Size(114, 20);
-            this.taskTimedt.TabIndex = 10;
+            this.taskTimel.Text = "Project";
             // 
             // taskPrioritycb
             // 
@@ -231,22 +215,11 @@
             this.taskCommentrt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskCommentrt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taskCommentrt.ForeColor = System.Drawing.SystemColors.Window;
-            this.taskCommentrt.Location = new System.Drawing.Point(85, 505);
+            this.taskCommentrt.Location = new System.Drawing.Point(85, 320);
             this.taskCommentrt.Name = "taskCommentrt";
-            this.taskCommentrt.Size = new System.Drawing.Size(260, 80);
+            this.taskCommentrt.Size = new System.Drawing.Size(260, 38);
             this.taskCommentrt.TabIndex = 20;
             this.taskCommentrt.Text = "";
-            // 
-            // taskCommentl
-            // 
-            this.taskCommentl.AutoSize = true;
-            this.taskCommentl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.taskCommentl.ForeColor = System.Drawing.Color.White;
-            this.taskCommentl.Location = new System.Drawing.Point(82, 480);
-            this.taskCommentl.Name = "taskCommentl";
-            this.taskCommentl.Size = new System.Drawing.Size(93, 17);
-            this.taskCommentl.TabIndex = 19;
-            this.taskCommentl.Text = "Task Comment";
             // 
             // button1
             // 
@@ -255,7 +228,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(160, 609);
+            this.button1.Location = new System.Drawing.Point(171, 556);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 29);
             this.button1.TabIndex = 24;
@@ -297,12 +270,68 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Expert";
             // 
+            // projectNames
+            // 
+            this.projectNames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectNames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectNames.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.projectNames.ForeColor = System.Drawing.Color.White;
+            this.projectNames.FormattingEnabled = true;
+            this.projectNames.Location = new System.Drawing.Point(233, 442);
+            this.projectNames.MaximumSize = new System.Drawing.Size(112, 0);
+            this.projectNames.MinimumSize = new System.Drawing.Size(112, 0);
+            this.projectNames.Name = "projectNames";
+            this.projectNames.Size = new System.Drawing.Size(112, 23);
+            this.projectNames.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(82, 482);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 15);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Start Date";
+            // 
+            // txtStartDate
+            // 
+            this.txtStartDate.Location = new System.Drawing.Point(85, 504);
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(117, 20);
+            this.txtStartDate.TabIndex = 31;
+            // 
+            // txtEndDate
+            // 
+            this.txtEndDate.Location = new System.Drawing.Point(234, 504);
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.Size = new System.Drawing.Size(113, 20);
+            this.txtEndDate.TabIndex = 33;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(231, 482);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 15);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "End Date";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Create_Task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(441, 662);
+            this.ClientSize = new System.Drawing.Size(441, 633);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtStartDate);
+            this.Controls.Add(this.txtEndDate);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.projectNames);
             this.Controls.Add(this.taskExpertcb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -310,7 +339,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.taskCommentrt);
             this.Controls.Add(this.taskNamel);
-            this.Controls.Add(this.taskCommentl);
             this.Controls.Add(this.taskStatusl);
             this.Controls.Add(this.taskDescl);
             this.Controls.Add(this.taskStatuscb);
@@ -319,14 +347,13 @@
             this.Controls.Add(this.taskResultl);
             this.Controls.Add(this.taskTimel);
             this.Controls.Add(this.taskProgressl);
-            this.Controls.Add(this.taskTimedt);
-            this.Controls.Add(this.taskResultcb);
             this.Controls.Add(this.taskDescrt);
             this.Controls.Add(this.taskPrioritycb);
             this.Controls.Add(this.taskHourst);
             this.Controls.Add(this.taskPriorityl);
             this.Name = "Create_Task";
             this.Text = "Create Task";
+            this.Load += new System.EventHandler(this.Create_Task_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,9 +366,7 @@
         private System.Windows.Forms.Label taskDescl;
         private System.Windows.Forms.RichTextBox taskDescrt;
         private System.Windows.Forms.Label taskResultl;
-        private System.Windows.Forms.ComboBox taskResultcb;
         private System.Windows.Forms.Label taskTimel;
-        private System.Windows.Forms.DateTimePicker taskTimedt;
         private System.Windows.Forms.ComboBox taskPrioritycb;
         private System.Windows.Forms.Label taskPriorityl;
         private System.Windows.Forms.ComboBox taskStatuscb;
@@ -351,10 +376,14 @@
         private System.Windows.Forms.MaskedTextBox taskHourst;
         private System.Windows.Forms.Label taskHoursl;
         private System.Windows.Forms.RichTextBox taskCommentrt;
-        private System.Windows.Forms.Label taskCommentl;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox taskExpertcb;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox projectNames;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker txtStartDate;
+        private System.Windows.Forms.DateTimePicker txtEndDate;
+        private System.Windows.Forms.Label label2;
     }
 }

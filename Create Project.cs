@@ -71,9 +71,9 @@ namespace ProjectManagement
                 while (dr.Read())
                 {
                     name = dr["NAME"].ToString();
+                    list.Add(name);
                 }
             }
-            list.Add(name);
             cn.Close();
             dr.Close();
             projectClientcb.DataSource = list;

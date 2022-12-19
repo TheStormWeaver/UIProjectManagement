@@ -19,10 +19,12 @@ namespace ProjectManagement
         SqlConnection cn;
         SqlDataReader dr;
         string con = ConfigurationManager.ConnectionStrings["ProjectManagement.Properties.Settings.ProjectManagementDBConnectionString"].ConnectionString;
+        int projectCode;
 
-        public Details_Project()
+        public Details_Project(int projectCode)
         {
             InitializeComponent();
+            this.projectCode = projectCode;
         }
 
         private void Details_Project_Load(object sender, EventArgs e)
@@ -45,26 +47,26 @@ namespace ProjectManagement
             
             eXPERTSDataGridView.DataSource = dt;
 
-            cmd = new SqlCommand("select * from [PROJECT_TASKS]", cn);
+            cmd = new SqlCommand("select * from [PROJECT_TASKS] pt WHERE pt.PROJECT_ID = "+projectCode+"", cn);
             dr = cmd.ExecuteReader();
             DataTable dtProj = new DataTable();
             dtProj.Load(dr);
             pROJECT_TASKSDataGridView.DataSource = dtProj;
             dr.Close();
 
-            cmd = new SqlCommand("", cn);
+            cmd = new SqlCommand("select p.PROJECT_ID, p.PROJECT_NAME, p.PROJECT_DESCRIPTION, p.PROJECT_CLIENT, p.PROJECT_BEGIN, p.PROJECT_END, ps.PSTATUS_NAME as 'PROJECT_STATUS', p.PROJECT_PAY_PER_HOUR from [PROJECTS] p JOIN [PROJECT_STATUS] ps ON p.PROJECT_STATUS = ps.PSTATUS_ID WHERE p.PROJECT_ID = "+ projectCode+" ", cn);
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                textBox6.Text = dr["Name"].ToString();
-                richTextBox2.Text = dr["Description"].ToString();
-                textBox5.Text = dr["Client"].ToString();
-                comboBox2.Text = dr[""].ToString();
-                dateTimePicker3.Text = dr[""].ToString();
-                dateTimePicker4.Text = dr[""].ToString();
-                textBox2.Text = dr[""].ToString();
+                txtName.Text = dr["PROJECT_NAME"].ToString();
+                txtDesc.Text = dr["PROJECT_DESCRIPTION"].ToString();
+                txtClient.Text = dr["PROJECT_CLIENT"].ToString();
+                txtStatus.Text = dr["PROJECT_STATUS"].ToString();
+                txtStart.Text = dr["PROJECT_BEGIN"].ToString();
+                txtEnd.Text = dr["PROJECT_END"].ToString();
+                txtPay.Text = dr["PROJECT_PAY_PER_HOUR"].ToString();
             }
-
+            dr.Close();
             cn.Close();
         }
 

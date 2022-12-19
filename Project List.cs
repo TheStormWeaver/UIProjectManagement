@@ -32,7 +32,7 @@ namespace ProjectManagement
             this.eXPERTSTableAdapter.Fill(this.projectManagementDBDataSet.EXPERTS);
             // TODO: This line of code loads data into the 'projectManagementDBDataSet.PROJECTS' table. You can move, or remove it, as needed.
             this.pROJECTSTableAdapter.Fill(this.projectManagementDBDataSet.PROJECTS);
-            cmd = new SqlCommand("select * from [PROJECTS]", cn);
+            cmd = new SqlCommand("select p.PROJECT_ID, p.PROJECT_NAME, p.PROJECT_DESCRIPTION, p.PROJECT_CLIENT, p.PROJECT_BEGIN, p.PROJECT_END, ps.PSTATUS_NAME as 'PROJECT_STATUS', p.PROJECT_PAY_PER_HOUR from [PROJECTS] p JOIN [PROJECT_STATUS] ps ON p.PROJECT_STATUS = ps.PSTATUS_ID", cn);
             dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
@@ -63,7 +63,7 @@ namespace ProjectManagement
 
             }
 
-            //Details.
+            //Delete.
             if (projectListGrid.CurrentCell.ColumnIndex.Equals(11) && e.RowIndex != -1)
             {
                 if (projectListGrid.CurrentCell != null && projectListGrid.CurrentCell.Value != null)
@@ -74,12 +74,23 @@ namespace ProjectManagement
                     //projectListGrid.DataSource = ;
                 }
             }
+            //Edit
             if (projectListGrid.CurrentCell.ColumnIndex.Equals(10) && e.RowIndex != -1)
             {
                 if (projectListGrid.CurrentCell != null && projectListGrid.CurrentCell.Value != null)
                 {
                     string projectCode = projectListGrid.Rows[projectListGrid.CurrentRow.Index].Cells[0].FormattedValue.ToString();
                     ProjectEdit frm = new ProjectEdit(Int32.Parse(projectCode));
+                    frm.ShowDialog();
+                }
+            }
+            //Details
+            if (projectListGrid.CurrentCell.ColumnIndex.Equals(9) && e.RowIndex != -1)
+            {
+                if (projectListGrid.CurrentCell != null && projectListGrid.CurrentCell.Value != null)
+                {
+                    string projectCode = projectListGrid.Rows[projectListGrid.CurrentRow.Index].Cells[0].FormattedValue.ToString();
+                    Details_Project frm = new Details_Project(Int32.Parse(projectCode));
                     frm.ShowDialog();
                 }
             }
@@ -111,7 +122,8 @@ namespace ProjectManagement
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Details_Project frm = new Details_Project();
+            int projectCode = 0;
+            Details_Project frm = new Details_Project(projectCode);
             frm.ShowDialog();
         }
 
