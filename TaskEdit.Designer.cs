@@ -53,6 +53,7 @@ namespace ProjectManagement
             // 
             this.taskExpertcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskExpertcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskExpertcb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskExpertcb.FormattingEnabled = true;
             this.taskExpertcb.Location = new System.Drawing.Point(77, 382);
             this.taskExpertcb.Name = "taskExpertcb";
@@ -78,7 +79,7 @@ namespace ProjectManagement
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(146, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 32);
+            this.label3.Size = new System.Drawing.Size(114, 32);
             this.label3.TabIndex = 48;
             this.label3.Text = "Edit Task";
             // 
@@ -143,6 +144,7 @@ namespace ProjectManagement
             // 
             this.taskStatuscb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskStatuscb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskStatuscb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskStatuscb.FormattingEnabled = true;
             this.taskStatuscb.Location = new System.Drawing.Point(77, 260);
             this.taskStatuscb.Name = "taskStatuscb";
@@ -157,7 +159,7 @@ namespace ProjectManagement
             this.taskProgresst.MaximumSize = new System.Drawing.Size(150, 21);
             this.taskProgresst.MinimumSize = new System.Drawing.Size(112, 21);
             this.taskProgresst.Name = "taskProgresst";
-            this.taskProgresst.Size = new System.Drawing.Size(112, 21);
+            this.taskProgresst.Size = new System.Drawing.Size(112, 20);
             this.taskProgresst.TabIndex = 42;
             // 
             // taskHoursl
@@ -198,6 +200,7 @@ namespace ProjectManagement
             // 
             this.taskResultcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskResultcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskResultcb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskResultcb.FormattingEnabled = true;
             this.taskResultcb.Location = new System.Drawing.Point(77, 324);
             this.taskResultcb.Name = "taskResultcb";
@@ -208,6 +211,7 @@ namespace ProjectManagement
             // 
             this.taskDescrt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskDescrt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taskDescrt.ForeColor = System.Drawing.SystemColors.Window;
             this.taskDescrt.Location = new System.Drawing.Point(77, 145);
             this.taskDescrt.Name = "taskDescrt";
             this.taskDescrt.Size = new System.Drawing.Size(260, 80);
@@ -218,6 +222,7 @@ namespace ProjectManagement
             // 
             this.taskPrioritycb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskPrioritycb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskPrioritycb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskPrioritycb.FormattingEnabled = true;
             this.taskPrioritycb.Location = new System.Drawing.Point(225, 260);
             this.taskPrioritycb.Name = "taskPrioritycb";
@@ -232,7 +237,7 @@ namespace ProjectManagement
             this.taskHourst.MaximumSize = new System.Drawing.Size(152, 21);
             this.taskHourst.MinimumSize = new System.Drawing.Size(112, 21);
             this.taskHourst.Name = "taskHourst";
-            this.taskHourst.Size = new System.Drawing.Size(112, 21);
+            this.taskHourst.Size = new System.Drawing.Size(112, 20);
             this.taskHourst.TabIndex = 44;
             // 
             // taskPriorityl

@@ -89,6 +89,7 @@
             // 
             this.taskDescrt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskDescrt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taskDescrt.ForeColor = System.Drawing.Color.White;
             this.taskDescrt.Location = new System.Drawing.Point(85, 146);
             this.taskDescrt.Name = "taskDescrt";
             this.taskDescrt.Size = new System.Drawing.Size(260, 80);
@@ -111,6 +112,7 @@
             // 
             this.taskResultcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskResultcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskResultcb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskResultcb.FormattingEnabled = true;
             this.taskResultcb.Location = new System.Drawing.Point(85, 325);
             this.taskResultcb.Name = "taskResultcb";
@@ -139,6 +141,7 @@
             // 
             this.taskPrioritycb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskPrioritycb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskPrioritycb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskPrioritycb.FormattingEnabled = true;
             this.taskPrioritycb.Location = new System.Drawing.Point(233, 261);
             this.taskPrioritycb.Name = "taskPrioritycb";
@@ -160,6 +163,7 @@
             // 
             this.taskStatuscb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskStatuscb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskStatuscb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskStatuscb.FormattingEnabled = true;
             this.taskStatuscb.Location = new System.Drawing.Point(85, 261);
             this.taskStatuscb.Name = "taskStatuscb";
@@ -226,6 +230,7 @@
             // 
             this.taskCommentrt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskCommentrt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.taskCommentrt.ForeColor = System.Drawing.SystemColors.Window;
             this.taskCommentrt.Location = new System.Drawing.Point(85, 505);
             this.taskCommentrt.Name = "taskCommentrt";
             this.taskCommentrt.Size = new System.Drawing.Size(260, 80);
@@ -266,7 +271,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(129, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 32);
+            this.label3.Size = new System.Drawing.Size(167, 32);
             this.label3.TabIndex = 26;
             this.label3.Text = "Task Creation";
             // 
@@ -274,6 +279,7 @@
             // 
             this.taskExpertcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskExpertcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskExpertcb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskExpertcb.FormattingEnabled = true;
             this.taskExpertcb.Location = new System.Drawing.Point(85, 383);
             this.taskExpertcb.Name = "taskExpertcb";

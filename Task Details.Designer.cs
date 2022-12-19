@@ -122,7 +122,7 @@
             this.taskProgresst.MaximumSize = new System.Drawing.Size(150, 23);
             this.taskProgresst.MinimumSize = new System.Drawing.Size(100, 23);
             this.taskProgresst.Name = "taskProgresst";
-            this.taskProgresst.Size = new System.Drawing.Size(120, 23);
+            this.taskProgresst.Size = new System.Drawing.Size(120, 20);
             this.taskProgresst.TabIndex = 34;
             // 
             // taskResultl
@@ -151,6 +151,7 @@
             // 
             this.taskResultcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskResultcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskResultcb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskResultcb.FormattingEnabled = true;
             this.taskResultcb.Location = new System.Drawing.Point(60, 311);
             this.taskResultcb.Name = "taskResultcb";
@@ -187,7 +188,7 @@
             this.taskHourst.MaximumSize = new System.Drawing.Size(120, 23);
             this.taskHourst.MinimumSize = new System.Drawing.Size(100, 23);
             this.taskHourst.Name = "taskHourst";
-            this.taskHourst.Size = new System.Drawing.Size(115, 23);
+            this.taskHourst.Size = new System.Drawing.Size(115, 20);
             this.taskHourst.TabIndex = 36;
             // 
             // taskDescrt
@@ -300,7 +301,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(126, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 32);
+            this.label3.Size = new System.Drawing.Size(148, 32);
             this.label3.TabIndex = 39;
             this.label3.Text = "Task Details";
             // 
@@ -308,6 +309,7 @@
             // 
             this.taskExpertcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskExpertcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskExpertcb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskExpertcb.FormattingEnabled = true;
             this.taskExpertcb.Location = new System.Drawing.Point(61, 371);
             this.taskExpertcb.Name = "taskExpertcb";

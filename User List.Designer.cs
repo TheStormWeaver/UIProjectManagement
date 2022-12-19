@@ -127,8 +127,6 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Snow;
             this.userListGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.userListGrid.RowTemplate.DividerHeight = 3;
-            this.userListGrid.RowTemplate.Height = 30;
             this.userListGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.userListGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.userListGrid.Size = new System.Drawing.Size(744, 305);
