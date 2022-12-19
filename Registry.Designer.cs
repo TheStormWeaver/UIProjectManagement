@@ -41,9 +41,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtLastname = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // registryBtn
@@ -53,7 +61,7 @@
             this.registryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registryBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.registryBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.registryBtn.Location = new System.Drawing.Point(444, 330);
+            this.registryBtn.Location = new System.Drawing.Point(445, 493);
             this.registryBtn.Name = "registryBtn";
             this.registryBtn.Size = new System.Drawing.Size(112, 30);
             this.registryBtn.TabIndex = 0;
@@ -68,7 +76,7 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.loginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.loginBtn.Location = new System.Drawing.Point(387, 380);
+            this.loginBtn.Location = new System.Drawing.Point(388, 543);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(225, 34);
             this.loginBtn.TabIndex = 1;
@@ -84,9 +92,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label1.Location = new System.Drawing.Point(355, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 21);
+            this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Username";
+            this.label1.Text = "Firstname";
             // 
             // label2
             // 
@@ -94,7 +102,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(357, 151);
+            this.label2.Location = new System.Drawing.Point(354, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 3;
@@ -106,7 +114,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(355, 233);
+            this.label3.Location = new System.Drawing.Point(352, 393);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 21);
             this.label3.TabIndex = 4;
@@ -153,7 +161,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 448);
+            this.panel1.Size = new System.Drawing.Size(261, 596);
             this.panel1.TabIndex = 8;
             // 
             // label4
@@ -181,7 +189,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.panel3.Controls.Add(this.txtPassword);
-            this.panel3.Location = new System.Drawing.Point(358, 177);
+            this.panel3.Location = new System.Drawing.Point(355, 337);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 30);
             this.panel3.TabIndex = 27;
@@ -190,17 +198,87 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.panel4.Controls.Add(this.txtConfirmPassword);
-            this.panel4.Location = new System.Drawing.Point(360, 261);
+            this.panel4.Location = new System.Drawing.Point(357, 421);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(300, 30);
             this.panel4.TabIndex = 28;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.panel5.Controls.Add(this.txtSurname);
+            this.panel5.Location = new System.Drawing.Point(358, 184);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(300, 30);
+            this.panel5.TabIndex = 30;
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSurname.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSurname.ForeColor = System.Drawing.Color.White;
+            this.txtSurname.Location = new System.Drawing.Point(0, 0);
+            this.txtSurname.Multiline = true;
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(300, 28);
+            this.txtSurname.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.Location = new System.Drawing.Point(355, 155);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 21);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Surname";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.panel6.Controls.Add(this.txtLastname);
+            this.panel6.Location = new System.Drawing.Point(358, 263);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(300, 30);
+            this.panel6.TabIndex = 32;
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtLastname.ForeColor = System.Drawing.Color.White;
+            this.txtLastname.Location = new System.Drawing.Point(0, 0);
+            this.txtLastname.Multiline = true;
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(300, 28);
+            this.txtLastname.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label6.Location = new System.Drawing.Point(355, 234);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 21);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Lastname";
             // 
             // Registry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(734, 448);
+            this.ClientSize = new System.Drawing.Size(734, 596);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -220,6 +298,10 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +322,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox txtLastname;
+        private System.Windows.Forms.Label label6;
     }
 }
