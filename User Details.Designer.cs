@@ -209,7 +209,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(132, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 32);
+            this.label3.Size = new System.Drawing.Size(150, 32);
             this.label3.TabIndex = 26;
             this.label3.Text = "User Details";
             // 
@@ -218,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(405, 342);
+            this.ClientSize = new System.Drawing.Size(405, 361);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.firstnamet);
             this.Controls.Add(this.firstnamel);

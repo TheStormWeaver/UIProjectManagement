@@ -60,7 +60,8 @@ namespace ProjectManagement
                 if (currentButton != (Button)btnSender)
                 {
                     DisableButton();
-                    Color color = SelectThemeColor();
+                    //Color color = SelectThemeColor();
+                    Color color = Color.FromArgb(0, 126, 249);
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
@@ -79,7 +80,7 @@ namespace ProjectManagement
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.BackColor = Color.FromArgb(24, 30, 54);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -255,5 +256,6 @@ namespace ProjectManagement
                 panelUsername.Text = "Again";
             }
         }
+
     }
 }
