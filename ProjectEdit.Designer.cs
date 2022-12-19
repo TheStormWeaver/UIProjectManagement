@@ -62,6 +62,7 @@
             // 
             this.projectClientcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.projectClientcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectClientcb.ForeColor = System.Drawing.SystemColors.Window;
             this.projectClientcb.FormattingEnabled = true;
             this.projectClientcb.Location = new System.Drawing.Point(66, 377);
             this.projectClientcb.Name = "projectClientcb";
@@ -148,7 +149,6 @@
             this.txtPay.Name = "txtPay";
             this.txtPay.Size = new System.Drawing.Size(113, 23);
             this.txtPay.TabIndex = 37;
-            //this.txtPay.TextChanged += new System.EventHandler(this.txtPay_TextChanged);
             // 
             // label4
             // 
@@ -206,6 +206,7 @@
             // 
             this.projectStatuscb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.projectStatuscb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectStatuscb.ForeColor = System.Drawing.Color.White;
             this.projectStatuscb.FormattingEnabled = true;
             this.projectStatuscb.Location = new System.Drawing.Point(66, 321);
             this.projectStatuscb.Name = "projectStatuscb";

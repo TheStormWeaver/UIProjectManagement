@@ -141,6 +141,7 @@
             // 
             this.projectClientcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.projectClientcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.projectClientcb.ForeColor = System.Drawing.SystemColors.Window;
             this.projectClientcb.FormattingEnabled = true;
             this.projectClientcb.Location = new System.Drawing.Point(52, 379);
             this.projectClientcb.Name = "projectClientcb";
@@ -190,7 +191,6 @@
             this.txtPay.Name = "txtPay";
             this.txtPay.Size = new System.Drawing.Size(113, 23);
             this.txtPay.TabIndex = 13;
-            
             // 
             // button2
             // 

@@ -117,6 +117,7 @@
             this.taskListGrid.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
             this.taskListGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.taskListGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.taskListGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
