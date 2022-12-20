@@ -42,7 +42,11 @@ namespace ProjectManagement
         private void button1_Click(object sender, EventArgs e)
         {
             Create_Task frm = new Create_Task();
-            frm.ShowDialog();
+            var result = frm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                refreshData();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -79,7 +83,11 @@ namespace ProjectManagement
                 {
                     taskCode = taskListGrid.Rows[taskListGrid.CurrentRow.Index].Cells[0].FormattedValue.ToString();
                     TaskEdit frm = new TaskEdit(Int32.Parse(taskCode));
-                    frm.ShowDialog();
+                    var result = frm.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        refreshData();
+                    }
                 }
             }
             //Details
@@ -133,7 +141,6 @@ namespace ProjectManagement
             dr = cmd.ExecuteReader();
             DataTable dt3 = new DataTable();
             dt3.Load(dr);
-            cn.Close();
             taskListGrid.DataSource = dt3;
             taskListGrid.Update();
             cn.Close();

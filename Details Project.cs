@@ -39,7 +39,7 @@ namespace ProjectManagement
             // TODO: This line of code loads data into the 'projectManagementDBDataSet.PROJECTS' table. You can move, or remove it, as needed.
             this.pROJECTSTableAdapter.Fill(this.projectManagementDBDataSet.PROJECTS);
             */
-            cmd = new SqlCommand("select * from [Experts]", cn);
+            cmd = new SqlCommand("select * from [Experts] e JOIN PROJECT_TASKS pt on e.EXPRET_ID = pt.EXPRET_ID JOIN PROJECT p ", cn);
             dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);

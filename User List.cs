@@ -63,7 +63,11 @@ namespace ProjectManagement
         private void button1_Click_1(object sender, EventArgs e)
         {
             User frm = new User();
-            frm.ShowDialog();
+            var result = frm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                refreshData();
+            }
         }
 
         private void userListGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -86,7 +90,11 @@ namespace ProjectManagement
                 {
                     string projectCode = userListGrid.Rows[userListGrid.CurrentRow.Index].Cells[0].FormattedValue.ToString();
                     EditUser frm = new EditUser(Int32.Parse(projectCode));
-                    frm.ShowDialog();
+                    var result = frm.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        refreshData();
+                    }
                 }
             }
             //Details
@@ -130,6 +138,22 @@ namespace ProjectManagement
                 dr.Close();
                 MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            dr.Close();
+            cn.Close();
+        }
+
+        public void refreshData()
+        {
+            cn = new SqlConnection(con);
+            cn.Open();
+
+            cmd = new SqlCommand("select * from [EXPERTS]", cn);
+            dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            userListGrid.DataSource = dt;
+            userListGrid.Update();
+
             dr.Close();
             cn.Close();
         }

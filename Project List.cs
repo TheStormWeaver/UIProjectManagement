@@ -88,7 +88,11 @@ namespace ProjectManagement
                 {
                     string projectCode = projectListGrid.Rows[projectListGrid.CurrentRow.Index].Cells[0].FormattedValue.ToString();
                     ProjectEdit frm = new ProjectEdit(Int32.Parse(projectCode));
-                    frm.ShowDialog();
+                    var result = frm.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        refreshData();
+                    }
                 }
             }
             //Details
@@ -124,7 +128,11 @@ namespace ProjectManagement
         private void button1_Click(object sender, EventArgs e)
         {
             Create_Project frm = new Create_Project();
-            frm.ShowDialog();
+            var result = frm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                refreshData();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -164,6 +172,20 @@ namespace ProjectManagement
                 MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dr.Close();
+            cn.Close();
+        }
+
+        public void refreshData()
+        {
+            cn = new SqlConnection(con);
+            cn.Open();
+
+            cmd = new SqlCommand("select * from [PROJECTS]", cn);
+            dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            projectListGrid.DataSource = dt;
+            projectListGrid.Update();
             cn.Close();
         }
     }

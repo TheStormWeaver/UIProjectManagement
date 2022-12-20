@@ -138,16 +138,18 @@ namespace ProjectManagement
                     cmd.Parameters.AddWithValue("hours", taskHourst.Text);
                     cmd.ExecuteNonQuery();
                     dr.Close();
+                    this.DialogResult = DialogResult.OK;
+                    MessageBox.Show("Successfully updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dr.Close();
+                    cn.Close();
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Something went wrong! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                cn.Close();
-                MessageBox.Show("Successfully updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Task_List frm = new Task_List();
-                frm.refreshData();
-                this.Close();
+               
+               
             }
         }
     }

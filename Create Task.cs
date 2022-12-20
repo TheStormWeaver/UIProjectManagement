@@ -102,7 +102,8 @@ namespace ProjectManagement
                 cmd.ExecuteNonQuery();
                
                 MessageBox.Show("Your Task is created.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                this.DialogResult = DialogResult.OK;
+                this.Close();
                 cn.Close();
             }
         }

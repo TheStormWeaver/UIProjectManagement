@@ -75,8 +75,9 @@ namespace ProjectManagement
                 cmd.ExecuteNonQuery();
                 
                 MessageBox.Show("Expert is created.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                this.DialogResult = DialogResult.OK;
                 cn.Close();
+                this.Close();
             }
         }
 

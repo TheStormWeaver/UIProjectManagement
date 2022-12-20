@@ -110,14 +110,16 @@ if (txtTitle.Text != string.Empty||txtDescription.Tex!= string.Empty||txtEndDate
                     cmd.Parameters.AddWithValue("pay", txtPay.Text);
                     cmd.ExecuteNonQuery();
                     dr.Close();
+                    MessageBox.Show("Successfully updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    cn.Close();
+                    this.Close();
                 }
                 else
                 {
-
+                    MessageBox.Show("Something went wrong!", "ERORR", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 }
-                MessageBox.Show("Successfully updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cn.Close();
-                this.Close();
+               
             }
         }
 

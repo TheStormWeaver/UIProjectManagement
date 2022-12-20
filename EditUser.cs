@@ -42,6 +42,7 @@ namespace ProjectManagement
                 lastnamet.Text = dr["EXPERT_LASTNAME"].ToString();
 
                 dr.Close();
+                cn.Close();
             }
             else
             {
@@ -52,6 +53,9 @@ namespace ProjectManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            cn = new SqlConnection(con);
+            cn.Open();
+
             if (firstnamet.Text != string.Empty || surnamet.Text != string.Empty || lastnamet.Text != string.Empty )
             {
                 cmd = new SqlCommand("select * from [EXPERTS] where EXPRET_ID = " + userId + " ", cn);
@@ -64,7 +68,12 @@ namespace ProjectManagement
                     cmd.Parameters.AddWithValue("surname", surnamet.Text);
                     cmd.Parameters.AddWithValue("lasrname", lastnamet.Text);
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                   
                     dr.Close();
+                    cn.Close();
+                    this.Close();                
                 }
                 else
                 {
