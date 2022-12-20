@@ -174,6 +174,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Details Project.resx">
       <DependentUpon>Details Project.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit Project Status.resx">
       <DependentUpon>Edit Project Status.cs</DependentUpon>
