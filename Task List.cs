@@ -59,7 +59,11 @@ namespace ProjectManagement
         private void button1_Click_1(object sender, EventArgs e)
         {
             Create_Task frm = new Create_Task();
-            frm.ShowDialog();
+            var result = frm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                refreshData();
+            }
         }
 
         private void taskListGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

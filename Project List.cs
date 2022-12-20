@@ -38,14 +38,35 @@ namespace ProjectManagement
             dt.Load(dr);
             cn.Close();
             projectListGrid.DataSource = dt;
-           
+
+            cn = new SqlConnection(con);
+            cn.Open();
+
+            cmd = new SqlCommand("select c.PSTATUS_NAME from [PROJECT_STATUS] c", cn);
+            List<string> list1 = new List<string>();
+            //string name = null;
+            
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                while (dr.Read())
+                {
+                    string name = null;
+                    name = dr["PSTATUS_NAME"].ToString();
+                    list1.Add(name);
+                }
+            }
+            dr.Close();
+            projectStatusSearchcb.DataSource = list1;
+            cn.Close();
+
         }
 
         private void searchProjectbtn_Click(object sender, EventArgs e)
         {
             cn = new SqlConnection(con);
             cn.Open();
-            cmd = new SqlCommand("select p.PROJECT_ID, p.PROJECT_NAME, p.PROJECT_DESCRIPTION, p.PROJECT_CLIENT, p.PROJECT_BEGIN, p.PROJECT_END, ps.PSTATUS_NAME as 'PROJECT_STATUS', p.PROJECT_PAY_PER_HOUR from [PROJECTS] p JOIN [PROJECT_STATUS] ps ON p.PROJECT_STATUS = ps.PSTATUS_ID WHERE p.PROJECT_NAME = '"+projectNameSearcht.Text+"'", cn);
+            cmd = new SqlCommand("select p.PROJECT_ID, p.PROJECT_NAME, p.PROJECT_DESCRIPTION, p.PROJECT_CLIENT, p.PROJECT_BEGIN, p.PROJECT_END, ps.PSTATUS_NAME as 'PROJECT_STATUS', p.PROJECT_PAY_PER_HOUR from [PROJECTS] p JOIN [PROJECT_STATUS] ps ON p.PROJECT_STATUS = ps.PSTATUS_ID WHERE p.PROJECT_NAME LIKE '"+projectNameSearcht.Text+"'", cn);
             dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);

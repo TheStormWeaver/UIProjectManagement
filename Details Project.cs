@@ -39,7 +39,7 @@ namespace ProjectManagement
             // TODO: This line of code loads data into the 'projectManagementDBDataSet.PROJECTS' table. You can move, or remove it, as needed.
             this.pROJECTSTableAdapter.Fill(this.projectManagementDBDataSet.PROJECTS);
             */
-            cmd = new SqlCommand("select * from [Experts] e JOIN PROJECT_TASKS pt on e.EXPRET_ID = pt.EXPRET_ID JOIN PROJECT p ", cn);
+            cmd = new SqlCommand("select * from [Experts] e JOIN PROJECT_TASKS pt on e.EXPRET_ID = pt.EXPRET_ID JOIN PROJECTS p ON pt.PROJECT_ID = p.PROJECT_ID where p.PROJECT_ID ="+ projectCode + "", cn);
             dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
@@ -67,6 +67,14 @@ namespace ProjectManagement
                 txtPay.Text = dr["PROJECT_PAY_PER_HOUR"].ToString();
             }
             dr.Close();
+
+            cmd = new SqlCommand("select sum(TASK_HOURS) as 'TOTAL_HOURS' from [PROJECT_TASKS] pt WHERE pt.PROJECT_ID = " + projectCode + "", cn);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                textBox3.Text = dr["TOTAL_HOURS"].ToString();
+            }
+            dr.Close();
             cn.Close();
         }
 
@@ -85,6 +93,11 @@ namespace ProjectManagement
             this.Validate();
             this.eXPERTSBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.projectManagementDBDataSet);
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
         }
     }

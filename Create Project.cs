@@ -50,7 +50,7 @@ namespace ProjectManagement
                     cmd.Parameters.AddWithValue("pay", txtPay.Text);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Project Created.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                     cn.Close();
                     this.Close();

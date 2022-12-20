@@ -62,7 +62,7 @@ namespace ProjectManagement
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    expertId = Int32.Parse(dr["EXPRET_ID"].ToString()) + 1;
+                    expertId = Int32.Parse(dr["EXPRET_ID"].ToString()) + 2;
                     dr.Close();
                 }
 
@@ -70,7 +70,7 @@ namespace ProjectManagement
                 cmd.Parameters.AddWithValue("exertId", expertId);
                 cmd.Parameters.AddWithValue("firstName", firstnamet.Text);
                 cmd.Parameters.AddWithValue("surName", surnamet.Text);
-                cmd.Parameters.AddWithValue("lastName", lastnamel.Text);
+                cmd.Parameters.AddWithValue("lastName", lastnamet.Text);
 
                 cmd.ExecuteNonQuery();
                 

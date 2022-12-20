@@ -80,7 +80,7 @@ namespace ProjectManagement
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    taskId = Int32.Parse(dr["TASK_ID"].ToString()) + 1;
+                    taskId = Int32.Parse(dr["TASK_ID"].ToString()) + 2;
                     dr.Close();
                 }
                 
