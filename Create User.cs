@@ -57,15 +57,24 @@ namespace ProjectManagement
 
             if (firstnamet.Text != string.Empty || surnamet.Text != string.Empty || lastnamel.Text != string.Empty)
             {
-               
-                cmd = new SqlCommand("insert into [EXPERTS] values(@firstName,@surName,@lastName,@client,@startDate,@endDate, 1, @pay)", cn);
+                cmd = new SqlCommand("select TOP 1 EXPRET_ID from [EXPERTS] ORDER BY EXPRET_ID DESC", cn);
+                int expertId = 0;
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    expertId = Int32.Parse(dr["EXPRET_ID"].ToString()) + 1;
+                    dr.Close();
+                }
+
+                cmd = new SqlCommand("insert into [EXPERTS] values(@exertId, 'I', @firstName, @surName, @lastName, null )", cn);
+                cmd.Parameters.AddWithValue("exertId", expertId);
                 cmd.Parameters.AddWithValue("firstName", firstnamet.Text);
                 cmd.Parameters.AddWithValue("surName", surnamet.Text);
                 cmd.Parameters.AddWithValue("lastName", lastnamel.Text);
 
                 cmd.ExecuteNonQuery();
                 
-                MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Expert is created.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 cn.Close();
             }

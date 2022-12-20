@@ -47,7 +47,7 @@ namespace ProjectManagement
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(99, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 32);
+            this.label3.Size = new System.Drawing.Size(116, 32);
             this.label3.TabIndex = 33;
             this.label3.Text = "Edit User";
             // 
@@ -75,6 +75,7 @@ namespace ProjectManagement
             this.button1.TabIndex = 32;
             this.button1.Text = "Save Changes";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // firstnamel
             // 
@@ -147,6 +148,7 @@ namespace ProjectManagement
             this.Controls.Add(this.lastnamel);
             this.Name = "EditUser";
             this.Text = "User Edit";
+            this.Load += new System.EventHandler(this.EditUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -47,7 +47,8 @@ namespace ProjectManagement
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Task_Details frm = new Task_Details();
+            int i = 0;
+            Task_Details frm = new Task_Details(i);
             frm.ShowDialog();
         }
 
@@ -87,7 +88,7 @@ namespace ProjectManagement
                 if (taskListGrid.CurrentCell != null && taskListGrid.CurrentCell.Value != null)
                 {
                     taskCode = taskListGrid.Rows[taskListGrid.CurrentRow.Index].Cells[0].FormattedValue.ToString();
-                    Details_Project frm = new Details_Project(Int32.Parse(taskCode));
+                    Task_Details frm = new Task_Details(Int32.Parse(taskCode));
                     frm.ShowDialog();
                 }
             }
@@ -121,6 +122,20 @@ namespace ProjectManagement
                 MessageBox.Show("Task does not exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dr.Close();
+            cn.Close();
+        }
+
+        public void refreshData()
+        {
+            cn = new SqlConnection(con);
+            cn.Open();
+            cmd = new SqlCommand("select pt.TASK_ID, p.PROJECT_NAME, E.EXPERT_NAME, pt.TASK_NAME, pt.TASK_DESCRIPTION, pt.TAS_DELIVERABLES, pt.TASK_BEGIN, pt.TASK_END, pt.TASK_PRIORITY, ts.STATUS_NAME AS 'TASK_STATUS', pt.TASK_READY, pt.TASK_HOURS from[PROJECT_TASKS] pt JOIN[PROJECTS] p ON pt.PROJECT_ID = p.PROJECT_ID JOIN EXPERTS e ON pt.EXPRET_ID = e.EXPRET_ID Join TASK_STATUS ts on pt.TASK_STATUS = ts.STATUS_ID", cn);
+            dr = cmd.ExecuteReader();
+            DataTable dt3 = new DataTable();
+            dt3.Load(dr);
+            cn.Close();
+            taskListGrid.DataSource = dt3;
+            taskListGrid.Update();
             cn.Close();
         }
     }

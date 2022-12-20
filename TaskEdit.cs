@@ -146,7 +146,7 @@ namespace ProjectManagement
                 cn.Close();
                 MessageBox.Show("Successfully updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Task_List frm = new Task_List();
-                frm.Update();
+                frm.refreshData();
                 this.Close();
             }
         }

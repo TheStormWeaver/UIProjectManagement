@@ -43,8 +43,15 @@ namespace ProjectManagement
 
         private void searchProjectbtn_Click(object sender, EventArgs e)
         {
-
-
+            cn = new SqlConnection(con);
+            cn.Open();
+            cmd = new SqlCommand("select p.PROJECT_ID, p.PROJECT_NAME, p.PROJECT_DESCRIPTION, p.PROJECT_CLIENT, p.PROJECT_BEGIN, p.PROJECT_END, ps.PSTATUS_NAME as 'PROJECT_STATUS', p.PROJECT_PAY_PER_HOUR from [PROJECTS] p JOIN [PROJECT_STATUS] ps ON p.PROJECT_STATUS = ps.PSTATUS_ID WHERE p.PROJECT_NAME = '"+projectNameSearcht.Text+"'", cn);
+            dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            cn.Close();
+            projectListGrid.DataSource = dt;
+            projectListGrid.Update();
             /*
             this.pROJECTSTableAdapter.FillByProjectIDSearch(this.projectManagementDBDataSet.PROJECTS, Convert.ToDecimal(projectIDSearcht.Text));
             this.pROJECTSTableAdapter.FillByProjectDateSearch(this.projectManagementDBDataSet.PROJECTS, projectStartDateSearcht.Text, projectEndDateSearcht.Text);
