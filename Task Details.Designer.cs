@@ -113,7 +113,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(64, 478);
+            this.label5.Location = new System.Drawing.Point(64, 487);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 58;
@@ -121,14 +121,14 @@
             // 
             // txtStartDate
             // 
-            this.txtStartDate.Location = new System.Drawing.Point(67, 500);
+            this.txtStartDate.Location = new System.Drawing.Point(67, 509);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.Size = new System.Drawing.Size(117, 20);
             this.txtStartDate.TabIndex = 59;
             // 
             // txtEndDate
             // 
-            this.txtEndDate.Location = new System.Drawing.Point(216, 500);
+            this.txtEndDate.Location = new System.Drawing.Point(216, 509);
             this.txtEndDate.Name = "txtEndDate";
             this.txtEndDate.Size = new System.Drawing.Size(113, 20);
             this.txtEndDate.TabIndex = 61;
@@ -138,7 +138,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(213, 478);
+            this.label2.Location = new System.Drawing.Point(213, 487);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 60;
@@ -147,11 +147,12 @@
             // projectNames
             // 
             this.projectNames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.projectNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.projectNames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.projectNames.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.projectNames.ForeColor = System.Drawing.Color.White;
             this.projectNames.FormattingEnabled = true;
-            this.projectNames.Location = new System.Drawing.Point(215, 438);
+            this.projectNames.Location = new System.Drawing.Point(215, 447);
             this.projectNames.MaximumSize = new System.Drawing.Size(112, 0);
             this.projectNames.MinimumSize = new System.Drawing.Size(112, 0);
             this.projectNames.Name = "projectNames";
@@ -161,10 +162,11 @@
             // taskExpertcb
             // 
             this.taskExpertcb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.taskExpertcb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.taskExpertcb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskExpertcb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskExpertcb.FormattingEnabled = true;
-            this.taskExpertcb.Location = new System.Drawing.Point(67, 379);
+            this.taskExpertcb.Location = new System.Drawing.Point(67, 388);
             this.taskExpertcb.Name = "taskExpertcb";
             this.taskExpertcb.Size = new System.Drawing.Size(112, 21);
             this.taskExpertcb.TabIndex = 56;
@@ -174,7 +176,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 357);
+            this.label1.Location = new System.Drawing.Point(64, 366);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 55;
@@ -187,6 +189,7 @@
             this.taskNamet.Location = new System.Drawing.Point(67, 87);
             this.taskNamet.Multiline = true;
             this.taskNamet.Name = "taskNamet";
+            this.taskNamet.ReadOnly = true;
             this.taskNamet.Size = new System.Drawing.Size(260, 23);
             this.taskNamet.TabIndex = 40;
             // 
@@ -197,6 +200,7 @@
             this.taskCommentrt.ForeColor = System.Drawing.SystemColors.Window;
             this.taskCommentrt.Location = new System.Drawing.Point(67, 316);
             this.taskCommentrt.Name = "taskCommentrt";
+            this.taskCommentrt.ReadOnly = true;
             this.taskCommentrt.Size = new System.Drawing.Size(260, 38);
             this.taskCommentrt.TabIndex = 54;
             this.taskCommentrt.Text = "";
@@ -237,6 +241,7 @@
             // taskStatuscb
             // 
             this.taskStatuscb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.taskStatuscb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.taskStatuscb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskStatuscb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskStatuscb.FormattingEnabled = true;
@@ -249,10 +254,11 @@
             // 
             this.taskProgresst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskProgresst.ForeColor = System.Drawing.SystemColors.Window;
-            this.taskProgresst.Location = new System.Drawing.Point(67, 438);
+            this.taskProgresst.Location = new System.Drawing.Point(67, 447);
             this.taskProgresst.MaximumSize = new System.Drawing.Size(150, 21);
             this.taskProgresst.MinimumSize = new System.Drawing.Size(112, 21);
             this.taskProgresst.Name = "taskProgresst";
+            this.taskProgresst.ReadOnly = true;
             this.taskProgresst.Size = new System.Drawing.Size(112, 21);
             this.taskProgresst.TabIndex = 51;
             // 
@@ -261,7 +267,7 @@
             this.taskHoursl.AutoSize = true;
             this.taskHoursl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taskHoursl.ForeColor = System.Drawing.Color.White;
-            this.taskHoursl.Location = new System.Drawing.Point(212, 357);
+            this.taskHoursl.Location = new System.Drawing.Point(212, 366);
             this.taskHoursl.Name = "taskHoursl";
             this.taskHoursl.Size = new System.Drawing.Size(96, 17);
             this.taskHoursl.TabIndex = 52;
@@ -284,7 +290,7 @@
             this.taskTimel.AutoSize = true;
             this.taskTimel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taskTimel.ForeColor = System.Drawing.Color.White;
-            this.taskTimel.Location = new System.Drawing.Point(213, 416);
+            this.taskTimel.Location = new System.Drawing.Point(213, 425);
             this.taskTimel.Name = "taskTimel";
             this.taskTimel.Size = new System.Drawing.Size(48, 17);
             this.taskTimel.TabIndex = 45;
@@ -295,7 +301,7 @@
             this.taskProgressl.AutoSize = true;
             this.taskProgressl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.taskProgressl.ForeColor = System.Drawing.Color.White;
-            this.taskProgressl.Location = new System.Drawing.Point(64, 416);
+            this.taskProgressl.Location = new System.Drawing.Point(64, 425);
             this.taskProgressl.Name = "taskProgressl";
             this.taskProgressl.Size = new System.Drawing.Size(89, 17);
             this.taskProgressl.TabIndex = 50;
@@ -308,6 +314,7 @@
             this.taskDescrt.ForeColor = System.Drawing.Color.White;
             this.taskDescrt.Location = new System.Drawing.Point(67, 142);
             this.taskDescrt.Name = "taskDescrt";
+            this.taskDescrt.ReadOnly = true;
             this.taskDescrt.Size = new System.Drawing.Size(260, 80);
             this.taskDescrt.TabIndex = 43;
             this.taskDescrt.Text = "";
@@ -315,6 +322,7 @@
             // taskPrioritycb
             // 
             this.taskPrioritycb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.taskPrioritycb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.taskPrioritycb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskPrioritycb.ForeColor = System.Drawing.SystemColors.Window;
             this.taskPrioritycb.FormattingEnabled = true;
@@ -327,10 +335,11 @@
             // 
             this.taskHourst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.taskHourst.ForeColor = System.Drawing.SystemColors.Window;
-            this.taskHourst.Location = new System.Drawing.Point(215, 378);
+            this.taskHourst.Location = new System.Drawing.Point(215, 387);
             this.taskHourst.MaximumSize = new System.Drawing.Size(152, 21);
             this.taskHourst.MinimumSize = new System.Drawing.Size(112, 21);
             this.taskHourst.Name = "taskHourst";
+            this.taskHourst.ReadOnly = true;
             this.taskHourst.Size = new System.Drawing.Size(112, 21);
             this.taskHourst.TabIndex = 53;
             // 
